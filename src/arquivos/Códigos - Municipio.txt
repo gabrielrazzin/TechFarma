@@ -1,0 +1,27 @@
+2800308 - Aracaju
+1501402 - Belém
+3106200 - Belo Horizonte
+1400100 - Boa Vista
+5300108 - Brasília
+5002704 - Campo Grande
+5103403 - Cuiabá
+4106902 - Curitiba
+4205407 - Florianópolis
+2304400 - Fortaleza
+5208707 - Goiânia
+2507507 - João Pessoa
+1600303 - Macapá
+2704302 - Maceió
+1302603 - Manaus
+2408102 - Natal
+1721000 - Palmas
+4314902 - Porto Alegre
+1100205 - Porto Velho
+2611606 - Recife
+1200401 - Rio Branco
+3304557 - Rio de Janeiro
+2927408 - Salvador
+2111300 - São Luís
+3550308 - São Paulo
+2211001 - Teresina
+3205309 - Vitória

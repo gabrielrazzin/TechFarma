@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="700.0" prefWidth="1001.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.techfarma.controller.consulta.ClienteC">
+   <children>
+      <TableView fx:id="tvCliente" layoutY="55.0" maxWidth="-Infinity" minWidth="-Infinity" onKeyPressed="#keyTableViewEvent" prefHeight="462.0" prefWidth="1001.0">
+         <columns>
+            <TableColumn fx:id="tcFilial" minWidth="-Infinity" prefWidth="43.0" resizable="false" text="Filial" />
+            <TableColumn fx:id="tcCodigo" minWidth="-Infinity" prefWidth="65.0" resizable="false" text="Código" />
+            <TableColumn fx:id="tcNome" minWidth="-Infinity" prefWidth="300.0" resizable="false" text="Nome" />
+            <TableColumn fx:id="tcConvenio" minWidth="-Infinity" prefWidth="100.0" resizable="false" text="Convênio&#10;" />
+            <TableColumn fx:id="tcEndereco" minWidth="-Infinity" prefWidth="200.0" resizable="false" text="Endereço" />
+            <TableColumn fx:id="tcBairro" minWidth="-Infinity" prefWidth="200.0" resizable="false" text="Bairro" />
+            <TableColumn fx:id="tcTelefone" minWidth="-Infinity" prefWidth="93.0" resizable="false" text="Telefone" />
+            <TableColumn fx:id="tcTotalVendas" minWidth="-Infinity" prefWidth="63.0" resizable="false" text="Limite" />
+            <TableColumn prefWidth="72.0" text="Disponível" />
+         </columns>
+      </TableView>
+      <HBox layoutX="44.0" layoutY="535.0" style="-fx-background-color: eaeaea;">
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <children>
+            <GridPane maxWidth="-Infinity" minWidth="-Infinity">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ComboBox id="comboBox" fx:id="cbFilial" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Filial" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtConsulta" maxWidth="-Infinity" minWidth="-Infinity" onKeyTyped="#filtraTabela" prefHeight="25.0" prefWidth="250.0" promptText="Consulta" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button id="buttonSalvar" fx:id="btincluir" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#abrirCadastro" prefHeight="25.0" prefWidth="100.0" text="Incluir" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <Button id="buttonSalvar" fx:id="btAlterar" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Alterar" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                  <ComboBox id="comboBox" fx:id="cbConvenio" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Convênio" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox layoutX="330.0" layoutY="641.0" style="-fx-background-color: eaeaea;">
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <children>
+            <GridPane prefHeight="25.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label id="atalho" maxWidth="-Infinity" minWidth="-Infinity" text="F2 - Incluir" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label id="atalho" maxWidth="-Infinity" minWidth="-Infinity" text="F4 - Alterar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label id="atalho" maxWidth="-Infinity" minWidth="-Infinity" text="F6 - Consulta" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label id="atalho" maxWidth="-Infinity" minWidth="-Infinity" text="ESC - Sair" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </GridPane>
+         </children>
+      </HBox>
+      <GridPane layoutX="222.0" layoutY="599.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="-Infinity" prefWidth="71.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label id="label" text="Visualizar Clientes :" GridPane.halignment="RIGHT" />
+            <JFXCheckBox id="checkBox" fx:id="chbAtivo" text="Ativos" GridPane.columnIndex="1" />
+            <JFXCheckBox id="checkBox" fx:id="chbInativo" text="Inativos" GridPane.columnIndex="2" />
+            <JFXCheckBox fx:id="chbBloq" text="Bloqueados" GridPane.columnIndex="3" />
+            <JFXCheckBox fx:id="chbConv" text="Conveniados" GridPane.columnIndex="4" />
+            <JFXCheckBox fx:id="chbTodos" text="Todos" GridPane.columnIndex="5" />
+         </children>
+      </GridPane>
+      <AnchorPane id="anchorPaneSuperior" layoutX="1.0" layoutY="1.0">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="29.0">
+               <children>
+                  <Label id="labelBSup" text="Visualização -  Cliente">
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button id="buttonFechar" fx:id="btClose" mnemonicParsing="false" onAction="#fecharJanela" text="X">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="825.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

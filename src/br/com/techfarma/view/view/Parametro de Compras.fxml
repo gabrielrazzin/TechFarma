@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="829.0" stylesheets="@../../../CSS/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="54.0" layoutY="30.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="texto" text="Filial :" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Curva :" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <ComboBox prefWidth="350.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <ComboBox prefWidth="350.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <TableView layoutX="-1.0" layoutY="102.0" prefHeight="421.0" prefWidth="829.0">
+        <columns>
+          <TableColumn prefWidth="63.0" text="Código" />
+          <TableColumn prefWidth="374.0" text="Grupo" />
+            <TableColumn maxWidth="50000.0" prefWidth="66.0" text="E (Seg)&#10;  Dias" />
+            <TableColumn prefWidth="67.0" text="E (Max) &#10;  Dias " />
+            <TableColumn prefWidth="57.0" text="Peso 1" />
+            <TableColumn prefWidth="58.0" text="Peso 2" />
+            <TableColumn prefWidth="66.0" text=" Peso 1 &#10;Sazonal" />
+            <TableColumn prefWidth="68.0" text=" Peso 2 &#10;Sazonal" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="11.0" layoutY="541.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="47.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="166.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="153.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="5.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="texto" text="Grupo :" />
+            <TextField GridPane.columnIndex="2" />
+            <Button id="confirmar" mnemonicParsing="false" prefHeight="30.0" text="Recalcular Estoques de Segurança" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <Button id="confirmar" mnemonicParsing="false" prefHeight="30.0" text="Calcular o Índece MEDIAF" GridPane.columnIndex="8" />
+            <Button id="confirmar" mnemonicParsing="false" prefHeight="30.0" text="Alterar Grupos Selecionados" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

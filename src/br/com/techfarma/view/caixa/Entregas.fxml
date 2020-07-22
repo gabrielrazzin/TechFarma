@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="anchorPaneMA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="900.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView id="table-view" layoutX="-1.0" layoutY="96.0" prefHeight="342.0" prefWidth="902.0" stylesheets="@SOUZA%2026-8-19/date.css">
+        <columns>
+          <TableColumn prefWidth="318.0" text="Nome" />
+          <TableColumn prefWidth="67.0" text="Telefone" />
+            <TableColumn prefWidth="163.0" text="Endereço" />
+            <TableColumn prefWidth="143.0" text="Bairro" />
+            <TableColumn prefWidth="134.0" text="Cidade" />
+            <TableColumn prefWidth="76.0" text="Convênio" />
+        </columns>
+      </TableView>
+      <AnchorPane id="anchorPaneSuperior" layoutY="1.0" prefHeight="30.0" prefWidth="900.0">
+         <children>
+            <Label id="labelBSup" layoutX="8.0" layoutY="8.0" text="Entregas" />
+            <Button id="buttonFechar" layoutX="873.0" layoutY="5.0" mnemonicParsing="false" text="X" />
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="6.0" layoutY="40.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField GridPane.rowIndex="1" />
+            <Label id="labelTextFields" text="Nome / Telefone / CPF" />
+            <Label id="labelTextFields" text="Endereço / CEP" GridPane.columnIndex="2" />
+            <Label id="labelTextFields" text="Matrícula / Cartão Fidelidade" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

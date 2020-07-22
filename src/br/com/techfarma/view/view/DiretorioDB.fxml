@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DiretorioDBController">
+   <children>
+      <TextField fx:id="txtURL" layoutX="168.0" layoutY="88.0" />
+      <TextField fx:id="txtUser" layoutX="168.0" layoutY="135.0" />
+      <TextField fx:id="txtSenha" layoutX="168.0" layoutY="188.0" />
+      <Label layoutX="168.0" layoutY="54.0" text="URL" />
+      <Label layoutX="165.0" layoutY="113.0" text="Usuario" />
+      <Label layoutX="165.0" layoutY="171.0" text="Senha" />
+      <Button fx:id="btSalvar" layoutX="206.0" layoutY="246.0" mnemonicParsing="false" onAction="#inserir" text="Salvar" />
+   </children>
+</AnchorPane>

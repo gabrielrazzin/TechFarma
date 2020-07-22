@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="anchorLogin" fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="360.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Pane id="anchorPaneLogin" layoutX="-14.0" layoutY="-77.0" prefHeight="415.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="buttonFechar" fx:id="btClose" layoutX="335.0" layoutY="6.0" mnemonicParsing="false" onAction="#fecharJanela" text="X" />
+            <Label id="labelLogin" layoutX="106.0" layoutY="339.0" text="Esqueceu a senha?" />
+            <Label id="labelLogin" layoutX="189.0" layoutY="339.0" text="Primeiro acesso" />
+            <Label id="labelDataLogin" fx:id="lbData" layoutX="5.0" layoutY="398.0" text="12/08/2019" />
+            <Label id="labelVersaoLogin" layoutX="155.0" layoutY="399.0" text="Versão: 1.0.0" />
+            <AnchorPane fx:id="anchorBDC" layoutX="240.0" layoutY="380.0" visible="false">
+               <children>
+                  <AnchorPane id="anchorPaneNotONtLogin" layoutX="13.0" layoutY="-5.0" prefHeight="22.0" prefWidth="92.0" style="-fx-background-radius: 0.5em;">
+                     <children>
+                        <Label layoutX="3.0" layoutY="5.0" text="Banco de dados Online" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="8.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="13.0" fitWidth="11.0" layoutX="55.0" layoutY="12.0">
+                     <image>
+                        <Image url="@../Images/Login/Green%20Arrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorBDD" layoutX="240.0" layoutY="380.0" prefHeight="21.0" prefWidth="100.0" visible="false">
+               <children>
+                  <AnchorPane id="anchorPaneNotOFFLogin" layoutX="13.0" layoutY="-5.0" prefHeight="22.0" prefWidth="92.0" style="-fx-background-radius: 0.5em;">
+                     <children>
+                        <Label layoutX="2.0" layoutY="5.0" text="Banco de dados Offline" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="8.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="13.0" fitWidth="11.0" layoutX="55.0" layoutY="12.0">
+                     <image>
+                        <Image url="@../Images/Login/Red%20Arrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <VBox layoutX="138.0" layoutY="88.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </VBox>
+      <TextField id="textFieldLogin" fx:id="txtUsuario" layoutX="101.0" layoutY="186.0" promptText="Usuário" />
+      <PasswordField id="textFieldLogin" fx:id="pfSenha" layoutX="102.0" layoutY="217.0" promptText="Senha" />
+      <Circle fill="#ffffff00" layoutX="178.0" layoutY="115.0" radius="50.0" stroke="#d7d7d7" strokeType="INSIDE" strokeWidth="1.3" />
+      <ImageView fitHeight="44.0" fitWidth="79.0" layoutX="139.0" layoutY="94.0">
+         <image>
+            <Image url="@../Images/ThinkByte.png" />
+         </image>
+         <effect>
+            <DropShadow color="WHITE" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </ImageView>
+      <Line endX="-3.70709228515625" endY="-1.0" layoutX="316.0" layoutY="116.0" startX="-88.0" startY="-1.0" stroke="#d7d7d7" strokeWidth="1.3" />
+      <Line endX="-3.70709228515625" endY="-1.0" layoutX="132.0" layoutY="116.0" startX="-88.0" startY="-1.0" stroke="#d7d7d7" strokeWidth="1.3" />
+      <JFXButton id="buttonLogin" layoutX="102.0" layoutY="288.0" onAction="#verificaLogin" prefHeight="25.0" prefWidth="155.0" ripplerFill="#bec3c6" text="Login" />
+      <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="228.0" layoutY="220.0">
+         <image>
+            <Image url="@../Images/Login/security.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="227.0" layoutY="189.0">
+         <image>
+            <Image url="@../Images/Login/login.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="265.0" layoutY="405.0" prefHeight="44.0" prefWidth="46.0">
+         <children>
+            <Button id="buttonNotONLogin" fx:id="btVerde" layoutX="25.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="20.0" visible="false" />
+            <Button id="buttonNotOFFLogin" fx:id="btVermelho" layoutX="25.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="20.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

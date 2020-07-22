@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="520.0" prefWidth="580.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.techfarma.controller.cadastro.CartaoC">
+   <children>
+      <VBox>
+         <children>
+            <AnchorPane id="anchorPaneSuperior" prefHeight="30.0" prefWidth="578.0">
+               <children>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0">
+                     <children>
+                        <Label id="labelBSup" text="Cadastro de Cartões">
+                           <HBox.margin>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button id="buttonFechar" fx:id="btClose" mnemonicParsing="false" onAction="#fecharJanela" text="X">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="410.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="1.0" top="1.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <Label id="texto" text="Dados do Cartão">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <HBox style="-fx-background-color: eaeaea;">
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Descrição :" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Taxa Administrativa :" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Taxa Adm. Parcelado :" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Prazo Pagamento :" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDescricao" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" GridPane.columnIndex="2" />
+                        <TextField fx:id="txtTaxADM" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtTaxADMP" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtPrazoPag" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="28.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label id="texto" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Tipo de Movimentação                                                                         Usa TEF">
+               <font>
+                  <Font name="Footlight MT Light" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox style="-fx-background-color: eaeaea;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <children>
+                  <GridPane maxWidth="-Infinity" minWidth="-Infinity">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="121.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="116.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="170.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="131.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXToggleButton id="toggleButton" fx:id="tbCredito" prefHeight="58.0" prefWidth="121.0" text="Crédito" toggleColor="#006ce8" toggleLineColor="#4666e3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <JFXToggleButton id="toggleButton" fx:id="tbTEF" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="131.0" text="Sim/Não" toggleColor="#006ce8" toggleLineColor="#4666e3" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <JFXToggleButton id="toggleButton" fx:id="tbDebito" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="116.0" styleClass="active" text="Débito" toggleColor="#006ce8" toggleLineColor="#4666e3" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </HBox>
+            <HBox style="-fx-background-color: eaeaea;">
+               <children>
+                  <ComboBox id="comboBox" fx:id="cbBandeira" onAction="#insereBandeira" promptText=" Bandeira">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fx:id="ivBandeiras" fitHeight="50.0" fitWidth="80.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="345.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <GridPane layoutX="182.0" layoutY="425.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button id="buttonSalvar" fx:id="btSalvar" mnemonicParsing="false" onAction="#inserirBanco" prefHeight="30.0" prefWidth="125.0" text="Salvar" />
+            <Button id="buttonCancelar" fx:id="btCancelar" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="30.0" prefWidth="125.0" text="Cancelar" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <HBox layoutX="116.0" layoutY="475.0" style="-fx-background-color: eaeaea;">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="74.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="122.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="88.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label id="atalho" text="F10 - Salvar" />
+                  <Label id="atalho" text="F4 - Limpar Campos" GridPane.columnIndex="2" />
+                  <Label id="atalho" text="Esc - Cancelar" GridPane.columnIndex="4" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+               </HBox.margin>
+            </GridPane>
+         </children>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

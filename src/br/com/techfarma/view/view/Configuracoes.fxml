@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfigNFe">
+   <children>
+      <Label layoutX="16.0" layoutY="14.0" text="Modelo DF" />
+      <ComboBox fx:id="cbModeloDF" layoutX="14.0" layoutY="41.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="85.0" text="IdCSC" />
+      <TextField fx:id="txtIdCSC" layoutX="14.0" layoutY="109.0" />
+      <Label layoutX="16.0" layoutY="141.0" text="CSC" />
+      <TextField fx:id="txtCSC" layoutX="16.0" layoutY="165.0" />
+      <Button fx:id="btSalvar" layoutX="264.0" layoutY="499.0" mnemonicParsing="false" onAction="#saveConfig" text="Gravar" />
+      <Label layoutX="14.0" layoutY="207.0" text="Pasta dos Schemas" />
+      <TextField fx:id="txtSchemaPath" layoutX="14.0" layoutY="231.0" />
+      <Label layoutX="216.0" layoutY="15.0" text="UF Destino" />
+      <ComboBox fx:id="cbUFDestino" layoutX="214.0" layoutY="42.0" prefWidth="150.0" />
+      <Label layoutX="394.0" layoutY="15.0" text="SSL Type" />
+      <ComboBox fx:id="cbSSLType" layoutX="392.0" layoutY="42.0" prefWidth="150.0" />
+      <Label layoutX="216.0" layoutY="85.0" text="Timeout" />
+      <CheckBox fx:id="chbHomologacao" layoutX="214.0" layoutY="169.0" mnemonicParsing="false" onAction="#verificaAmbiente" text="Homologação" />
+      <CheckBox fx:id="chbProducao" layoutX="314.0" layoutY="169.0" mnemonicParsing="false" onAction="#verificaAmbiente" text="Produção" />
+      <Label layoutX="216.0" layoutY="141.0" text="Ambiente" />
+      <ComboBox fx:id="cbCrypt" layoutX="214.0" layoutY="231.0" prefWidth="150.0" />
+      <Label layoutX="216.0" layoutY="207.0" text="CryptLib" />
+      <ComboBox fx:id="cbHttp" layoutX="214.0" layoutY="294.0" prefWidth="150.0" />
+      <Label layoutX="216.0" layoutY="270.0" text="HttpLib" />
+      <ComboBox fx:id="cbXmlSign" layoutX="403.0" layoutY="231.0" prefWidth="150.0" />
+      <Label layoutX="405.0" layoutY="207.0" text="XmlSignLib" />
+      <Label layoutX="15.0" layoutY="359.0" text="Caminho Certificado" />
+      <TextField fx:id="txtCertPath" layoutX="15.0" layoutY="383.0" />
+      <Label layoutX="16.0" layoutY="417.0" text="Senha Certificado" />
+      <TextField fx:id="txtCertPassword" layoutX="16.0" layoutY="441.0" />
+      <Label layoutX="240.0" layoutY="359.0" text="Numero de série" />
+      <TextField fx:id="txtCertNumero" layoutX="240.0" layoutY="383.0" />
+      <Button fx:id="btSelectSchema" layoutX="165.0" layoutY="231.0" mnemonicParsing="false" onAction="#selectSchema" text="..." />
+      <Button fx:id="btSelectCert" layoutX="177.0" layoutY="383.0" mnemonicParsing="false" onAction="#selectCertificado" text="..." />
+      <TextField fx:id="txtTimeOut" layoutX="215.0" layoutY="109.0" />
+   </children>
+</AnchorPane>

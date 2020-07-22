@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane id="anchorPaneSuperior" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="800.0">
+         <children>
+            <Button id="buttonFechar" layoutX="776.0" layoutY="5.0" mnemonicParsing="false" text="X" />
+            <Label id="labelBSup" layoutX="14.0" layoutY="8.0" text="Cadastro de Convênios" />
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="10.0" layoutY="46.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="390.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label id="texto" text="Nome :" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Endereço :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="106.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="230.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label id="texto" text="Bairro :" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" />
+            <GridPane GridPane.columnIndex="4">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField id="textField" prefWidth="200.0" promptText="UF" />
+                  <TextField id="textField" prefWidth="200.0" promptText="CEP" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="136.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="texto" text="Cidade :" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Fone :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label id="texto" text="CNPJ :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label id="texto" text="RG :" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Fax :" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Ins. Est. :" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label id="texto" text="CPF :" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Desconto :" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="6" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="317.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="130.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField id="textField" prefWidth="200.0" promptText="Limite de Crédito" />
+            <ComboBox id="comboBox" prefWidth="200.0" promptText=" Fechamento" GridPane.rowIndex="2" />
+            <ComboBox id="comboBox" prefWidth="200.0" promptText=" Vencimento" GridPane.rowIndex="3" />
+            <ComboBox id="comboBox" prefWidth="200.0" promptText=" Vendedor" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <TableView layoutX="164.0" layoutY="317.0" prefHeight="136.0" prefWidth="314.0">
+        <columns>
+          <TableColumn prefWidth="157.0" text="Classe com desconto" />
+          <TableColumn prefWidth="82.0" text="Desconto" />
+        </columns>
+      </TableView>
+      <JFXCheckBox id="check-box" layoutX="164.0" layoutY="291.0" nodeOrientation="RIGHT_TO_LEFT" text="Não Pagar Comissão" />
+      <TextArea layoutX="508.0" layoutY="46.0" prefHeight="213.0" prefWidth="272.0" promptText="Observações :" />
+      <Line endX="100.0" layoutX="678.0" layoutY="291.0" startX="38.0" />
+      <Label id="texto" layoutX="579.0" layoutY="283.0" text="Dados de Cobrança" />
+      <Line endX="100.0" layoutX="470.0" layoutY="291.0" startX="38.0" />
+      <Line endX="-100.0" endY="141.0" layoutX="879.0" layoutY="291.0" startX="-100.0" />
+      <GridPane layoutX="512.0" layoutY="302.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="180.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="texto" text="Endereço :" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" />
+            <Label id="texto" text="Bairro :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Cidade :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="591.0" layoutY="397.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField id="textField" prefWidth="200.0" promptText="UF" />
+            <TextField id="textField" prefWidth="200.0" promptText="CEP" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <Line endX="-100.0" endY="141.0" layoutX="608.0" layoutY="291.0" startX="-100.0" />
+      <JFXToggleButton id="togglebutton" layoutX="572.0" layoutY="453.0" text="Des/Ativ" />
+      <Label id="label" layoutX="505.0" layoutY="438.0" text="Vendas para conveniados em outras filiais" />
+      <GridPane layoutX="205.0" layoutY="525.0" maxWidth="-Infinity" minWidth="-Infinity">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button id="buttonSalvar" mnemonicParsing="false" onAction="#incluirClasse" prefHeight="30.0" prefWidth="125.0" text="  Salvar  " />
+            <Button id="buttonCancelar" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Cancelar" GridPane.columnIndex="2" />
+            <Button id="buttonCancelar" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Excluir" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

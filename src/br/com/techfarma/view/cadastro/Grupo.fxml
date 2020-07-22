@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="473.0" prefWidth="775.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.techfarma.controller.cadastro.GrupoC">
+   <children>
+      <VBox layoutX="14.0" layoutY="41.0">
+         <children>
+            <HBox style="-fx-background-color: eaeaea;">
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="74.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtDescricao" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" GridPane.columnIndex="2" />
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Descrição:" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: eaeaea;">
+               <children>
+                  <GridPane maxWidth="-Infinity" minWidth="-Infinity">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="13.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Taxa de Comissão:" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Desconto Automático:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Tx Desc. Máximo:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Taxa de Marcação:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="labelTextFields" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Meta:" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtTaxComi" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="0.00" GridPane.columnIndex="2" />
+                        <TextField fx:id="txtDescAuto" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtDescMax" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtTaxMarc" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtMeta" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label text="\%" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="\%" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="\%" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="\%" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox style="-fx-background-color: eaeaea;">
+               <children>
+                  <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="721.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="138.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="165.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="189.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="180.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXToggleButton id="toggleButton" fx:id="tbDesconto" prefHeight="58.0" prefWidth="138.0" text="Desconto " toggleColor="#006ce8" toggleLineColor="#4666e3" />
+                        <JFXToggleButton id="toggleButton" fx:id="tbEstqNeg" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="193.0" text="Estoque Negativo" toggleColor="#006ce8" toggleLineColor="#4666e3" GridPane.columnIndex="4" />
+                        <JFXToggleButton id="toggleButton" fx:id="tbCRM" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="173.0" text="Coleta de CRM" toggleColor="#006ce8" toggleLineColor="#4666e3" GridPane.columnIndex="6" />
+                        <JFXToggleButton id="toggleButton" fx:id="tbExgReceita" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="166.0" styleClass="active" text="Exige Receita" toggleColor="#006ce8" toggleLineColor="#4666e3" GridPane.columnIndex="2" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <GridPane layoutX="255.0" layoutY="379.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="270.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button id="buttonSalvar" fx:id="btSalvar" mnemonicParsing="false" onAction="#inserirBanco" prefHeight="30.0" prefWidth="125.0" text="Salvar" />
+            <Button id="buttonCancelar" fx:id="btCancelar" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="30.0" prefWidth="125.0" text="Cancelar" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <AnchorPane id="anchorPaneSuperior" layoutX="1.0" layoutY="1.0" prefHeight="30.0" prefWidth="598.0">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0">
+               <children>
+                  <Label id="labelBSup" text="Cadastro - Grupo">
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button id="buttonFechar" fx:id="btClose" mnemonicParsing="false" onAction="#fecharJanela" text="X">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="631.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="216.0" layoutY="429.0" style="-fx-background-color: eaeaea;">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="74.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="122.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="88.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label id="atalho" text="F10 - Salvar" />
+                  <Label id="atalho" text="F4 - Limpar Campos" GridPane.columnIndex="2" />
+                  <Label id="atalho" text="Esc - Cancelar" GridPane.columnIndex="4" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+               </HBox.margin>
+            </GridPane>
+         </children>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

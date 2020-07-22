@@ -1,0 +1,18 @@
+[Cancelamento]
+Arquivo=
+CNPJDest=
+CStat=501
+CUF=33
+DhRecbto=21/04/2020 14:23:34
+Msg=
+VerAplic=SVRSnfce201905151543
+Versao=SVRSnfce201905151543
+XML=
+XMotivo=Rejeicao: Prazo de Cancelamento Superior ao Previsto na Legislacao
+chNFe=33200430424716000187650010000000901837543980
+emailDest=
+nProt=
+nSeqEvento=1
+tpAmb=2
+tpEvento=110111
+xEvento=

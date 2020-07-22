@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" stylesheets="@css/Visual.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Notas Fiscais">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchor">
+               <children>
+                  <GridPane layoutX="28.0" layoutY="40.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="83.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Loja :" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Nome:" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <TextField prefWidth="200.0" GridPane.columnIndex="2" />
+                        <TextField prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label id="texto" layoutX="410.0" layoutY="9.0" text="Período" />
+                  <Line endX="100.0" layoutX="515.0" layoutY="23.0" startX="-45.0" />
+                  <Line endX="-100.0" endY="111.0" layoutX="715.0" layoutY="7.0" startX="-100.0" startY="16.0" />
+                  <Line endX="100.0" layoutX="515.0" layoutY="118.0" startX="-132.0" />
+                  <Line endX="-100.0" endY="111.0" layoutX="482.0" layoutY="7.0" startX="-100.0" startY="16.0" />
+                  <Line endX="100.0" layoutX="301.0" layoutY="23.0" startX="81.0" />
+                  <GridPane layoutX="388.0" layoutY="41.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="41.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="180.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Inicial" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Final" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <JFXDatePicker GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <JFXDatePicker GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="663.0" layoutY="41.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="82.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Nota Fiscal :" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Série :" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="2" />
+                        <TextField prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <TableView layoutX="-1.0" layoutY="143.0" prefHeight="449.0" prefWidth="900.0">
+                     <columns>
+                        <TableColumn minWidth="5.0" prefWidth="50.0" text="Filial" />
+                        <TableColumn prefWidth="142.0" text="Número do Pedido" />
+                        <TableColumn prefWidth="102.0" text="Data do Pedido" />
+                        <TableColumn prefWidth="154.0" text="Distribuidora" />
+                        <TableColumn prefWidth="64.0" text="Status" />
+                        <TableColumn prefWidth="93.0" text="Nº Unidades" />
+                        <TableColumn prefWidth="69.0" text="Nº Ítens" />
+                        <TableColumn prefWidth="101.0" text="Total Produtos" />
+                        <TableColumn prefWidth="51.0" text="Boleto" />
+                        <TableColumn prefWidth="75.0" text="Digitador" />
+                     </columns>
+                  </TableView>
+                  <GridPane layoutX="134.0" layoutY="610.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="45.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="59.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Ordem" />
+                        <ComboBox prefWidth="200.0" GridPane.columnIndex="2" />
+                        <Label id="texto" text="Consulta" GridPane.columnIndex="4" />
+                        <TextField prefWidth="300.0" GridPane.columnIndex="6" />
+                     </children>
+                  </GridPane>
+                  <Separator layoutX="57.0" layoutY="656.0" prefHeight="18.0" prefWidth="784.0" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+    <Tab text="Totais / Icms / Ipi">
+         <content>
+            <AnchorPane prefHeight="667.0" prefWidth="963.0" styleClass="anchor">
+               <children>
+                  <JFXCheckBox id="check-box" layoutX="384.0" layoutY="14.0" text="Nota Consignada" />
+                  <JFXCheckBox id="check-box" layoutX="534.0" layoutY="14.0" text="Nota de Transferência" />
+                  <JFXCheckBox id="check-box" layoutX="716.0" layoutY="14.0" text="Nota de Bonificação" />
+                  <GridPane layoutX="16.0" layoutY="61.0" prefWidth="570.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="115.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="115.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Nota Fiscal" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Série" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Modelo" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Data de Emissão" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Data de Entrada" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <JFXDatePicker GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <JFXDatePicker GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="16.0" layoutY="129.0" prefHeight="60.0" prefWidth="570.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="460.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="CFOP" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <ComboBox prefWidth="100.0" GridPane.rowIndex="1" />
+                        <TextField prefWidth="460.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Line endX="785.0" endY="1.52587890625E-5" layoutX="115.0" layoutY="38.0" startX="-115.0" startY="1.52587890625E-5" />
+                  <Line endX="799.0" layoutX="101.0" layoutY="202.0" startX="-100.0" />
+                  <Line endX="-100.0" endY="163.0" layoutX="693.0" layoutY="38.0" startX="-100.0" />
+                  <GridPane layoutX="600.0" layoutY="46.0" prefHeight="60.0" prefWidth="199.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="210.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Fornecedor" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="598.0" layoutY="114.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="144.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="144.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="CNPJ" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Inscrição Estadual" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label id="texto" layoutX="16.0" layoutY="14.0" text="Cabeçalho da Nota" />
+                  <Line endX="802.0" layoutX="98.0" layoutY="238.0" startX="-100.0" />
+                  <Label id="texto" layoutX="16.0" layoutY="218.0" text="Desdobramento Financeiro" />
+                  <GridPane layoutX="16.0" layoutY="242.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="126.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="160.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="135.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Base Cálculo ICMS" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Base Cálculo IPI" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label id="texto" prefHeight="18.0" prefWidth="97.0" text="Valor do Frete" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor ICMS" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor Retito ICMS" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor Isento ICMS" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Base Cál. ICMS ST" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Nota Fiscal" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor II" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor PIS" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor Cofins" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Nota Fiscal" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Outras Desp. Acessórias" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Desconto na Nota" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor Total Produtos" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.rowIndex="3" />
+                        <TextField GridPane.rowIndex="5" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                        <TextField GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="748.0" layoutY="239.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="135.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField GridPane.rowIndex="1" />
+                        <Label id="texto" text="Valor ICMS ST" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="748.0" layoutY="362.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="135.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField GridPane.rowIndex="1" />
+                        <Label id="texto" text="Valor Total da Nota" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <Line endX="802.0" layoutX="98.0" layoutY="430.0" startX="-100.0" />
+                  <Line endX="801.0" layoutX="99.0" layoutY="461.0" startX="-100.0" />
+                  <Label id="texto" layoutX="14.0" layoutY="443.0" text="Informações da Transportadora" />
+                  <GridPane layoutX="87.0" layoutY="462.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="115.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Transportadora" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="CNPJ" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ComboBox prefWidth="300.0" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label id="texto" text="Incrição Estadual" GridPane.columnIndex="6" />
+                        <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="87.0" layoutY="533.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField GridPane.columnIndex="2" />
+                        <Label id="texto" text="Endereço" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <Line endX="801.0" layoutX="99.0" layoutY="575.0" startX="-100.0" />
+                  <ComboBox layoutX="4.0" layoutY="605.0" prefWidth="150.0" />
+                  <Label id="texto" layoutX="5.0" layoutY="583.0" text="Plano de Contas" />
+                  <TextField layoutX="164.0" layoutY="605.0" />
+                  <TextArea layoutX="357.0" layoutY="605.0" prefHeight="81.0" prefWidth="511.0" />
+                  <Label id="texto" layoutX="357.0" layoutY="583.0" text="Informações Adicionais (NFe)" />
+                  <Button id="confirmar" layoutX="37.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Salvar" />
+                  <Button id="cancelar" layoutX="170.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Cancelar" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab text="Produtos">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor">
+               <children>
+                  <GridPane layoutX="50.0" layoutY="14.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Produto" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label text="Último Custo" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label text="Pesquisa" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label text="Fabricante" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <Label text="Grupo" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                        <Label text="CFOP" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="27.0" layoutY="84.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Quantidade" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label text="Embalagem" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label text="Valor  Unitário" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label prefHeight="16.0" prefWidth="103.0" text="\%   Desconto  $" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label text="Desconto Nota" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label prefHeight="16.0" prefWidth="85.0" text="\%   ICMS $" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label prefHeight="16.0" prefWidth="43.0" text="\% IPI $" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                        <GridPane GridPane.columnIndex="6" GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField />
+                              <TextField GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="10" GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField />
+                              <TextField GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="12" GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField />
+                              <TextField GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="55.0" layoutY="165.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Bc. ICMS Substituição" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label text="ICMS Substituição" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label prefHeight="16.0" prefWidth="74.0" text="\%   Margem" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label text="P.M.C." GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label text="Custo Aplicado" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                        <Label text="Preçço Sugerido" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <TableView layoutX="-1.0" layoutY="238.0" prefHeight="384.0" prefWidth="900.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Código" />
+                      <TableColumn prefWidth="128.0" text="Código do Produto" />
+                        <TableColumn prefWidth="239.0" text="Descrição" />
+                        <TableColumn prefWidth="64.0" text="Curva" />
+                        <TableColumn prefWidth="76.0" text="Estoque" />
+                        <TableColumn prefWidth="83.0" text="   Qtd&#10;Recebida" />
+                        <TableColumn prefWidth="70.0" text="Estoque &#10;Previsto" />
+                        <TableColumn prefWidth="69.0" text=" Custo &#10;Unitário" />
+                        <TableColumn prefWidth="75.0" text="Valor Total" />
+                    </columns>
+                  </TableView>
+                  <Separator layoutX="134.0" layoutY="636.0" prefHeight="13.0" prefWidth="630.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Faturamento">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor">
+               <children>
+                  <GridPane layoutX="31.0" layoutY="14.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Nota Fiscal" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Fornecedor" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="31.0" layoutY="97.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Número :" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Vencimento :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Juros :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Desconto Financeiro :" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Despesas Financeiras :" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor :" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="2" />
+                        <JFXDatePicker GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <TableView layoutX="450.0" layoutY="45.0" prefHeight="281.0" prefWidth="449.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Número" />
+                      <TableColumn prefWidth="81.0" text="Data &#10;Vencimento" />
+                        <TableColumn prefWidth="47.0" text="Juros" />
+                        <TableColumn prefWidth="77.0" text="Deduções" />
+                        <TableColumn prefWidth="65.0" text="Des.Fin." />
+                        <TableColumn prefWidth="75.0" text="Valor" />
+                    </columns>
+                  </TableView>
+                  <ProgressBar layoutX="37.0" layoutY="337.0" prefHeight="21.0" prefWidth="719.0" progress="0.43" />
+                  <GridPane layoutX="37.0" layoutY="297.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Chave NFe:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Button id="confirmar" layoutX="761.0" layoutY="333.0" mnemonicParsing="false" prefHeight="30.0" text="Confirmar a Nota" />
+                  <GridPane layoutX="58.0" layoutY="371.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label id="texto" text="Data de Entrada :" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Nº de Unidades :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Nº de Itens na Nota :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label id="texto" text="Valor Total da Nota :" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <JFXDatePicker GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TableView layoutX="402.0" layoutY="371.0" prefHeight="216.0" prefWidth="497.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Número" />
+                      <TableColumn prefWidth="47.0" text="Valor" />
+                        <TableColumn prefWidth="75.0" text="Desconto" />
+                        <TableColumn prefWidth="115.0" text="Valor Líquido" />
+                        <TableColumn prefWidth="88.0" text="Vencimento" />
+                    </columns>
+                  </TableView>
+                  <Button id="confirmar" layoutX="149.0" layoutY="550.0" mnemonicParsing="false" prefHeight="30.0" text="Chegou o Boleto" />
+                  <Separator layoutX="36.0" layoutY="602.0" prefHeight="13.0" prefWidth="829.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

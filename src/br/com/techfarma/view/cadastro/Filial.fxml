@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import controller.MaskedTextField?>
+
+<AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="530.0" prefWidth="700.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.techfarma.controller.cadastro.FilialC">
+   <children>
+      <AnchorPane id="anchorPaneSuperior" layoutX="1.0" layoutY="1.0" prefHeight="30.0" prefWidth="698.0">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0">
+               <children>
+                  <Label id="labelBSup" text="Cadastro de Filial">
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button id="buttonFechar" fx:id="btClose" mnemonicParsing="false" onAction="#fecharJanela" text="X">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="550.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="14.0" layoutY="44.0">
+         <children>
+            <Label id="texto" text="Dados">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox style="-fx-background-color: eaeaea;">
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="93.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="220.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtNome" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="2" />
+                        <TextField fx:id="txtRazao" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <MaskedTextField fx:id="txtCNPJ" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtInscEst" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtSite" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label id="labelTextFields" text="Nome" GridPane.halignment="RIGHT" />
+                        <Label id="labelTextFields" text="Razão Social" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Label id="labelTextFields" text="CNPJ" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                        <Label id="labelTextFields" text="Insc. Estadual" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                        <Label id="labelTextFields" text="Site" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                        <Label id="labelTextFields" text="Grupo Filiais" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                        <ComboBox id="comboBox" fx:id="cbGrupoF" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="368.0" layoutY="44.0">
+         <children>
+            <Label id="texto" text="Endereço">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox style="-fx-background-color: eaeaea;">
+               <children>
+                  <VBox>
+                     <children>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="27.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="16.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label id="labelTextFields" text="Rua" GridPane.halignment="RIGHT" />
+                              <TextField fx:id="txtRua" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="2" />
+                              <Label id="labelTextFields" text="Nº" GridPane.columnIndex="4" />
+                              <TextField fx:id="txtNum" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="6" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="92.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="172.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label id="labelTextFields" text="Complemento" GridPane.halignment="RIGHT" />
+                              <TextField fx:id="txtCompl" GridPane.columnIndex="2" />
+                              <Label id="labelTextFields" text="Bairro" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtBairro" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label id="labelTextFields" text="Cidade" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtCidade" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label id="labelTextFields" text="CEP" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                              <MaskedTextField fx:id="txtCEP" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <ComboBox id="comboBox" fx:id="cbMunicipio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="274.0" promptText="Município">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <ComboBox id="comboBox" fx:id="cbUF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="274.0" promptText=" UF">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </HBox>
+            <Label id="texto" text="Contato">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox style="-fx-background-color: eaeaea;">
+               <children>
+                  <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="267.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="85.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="172.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label id="labelTextFields" text="Telefone" GridPane.halignment="RIGHT" />
+                        <Label id="labelTextFields" text="Celular" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Label id="labelTextFields" text="E-mail" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                        <MaskedTextField fx:id="txtTel" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="172.0" GridPane.columnIndex="2" />
+                        <MaskedTextField fx:id="txtCel" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtEmail" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+      <GridPane layoutX="46.0" layoutY="390.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button id="buttonSalvar" fx:id="btSalvar" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#inserirBanco" prefHeight="30.0" prefWidth="125.0" text="Salvar" />
+            <Button id="buttonCancelar" fx:id="btCancelar" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="30.0" prefWidth="125.0" text="Cancelar" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <HBox layoutX="178.0" layoutY="483.0" style="-fx-background-color: eaeaea;">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="74.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="122.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="88.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label id="atalho" text="F10 - Salvar" />
+                  <Label id="atalho" text="F4 - Limpar Campos" GridPane.columnIndex="2" />
+                  <Label id="atalho" text="Esc - Cancelar" GridPane.columnIndex="4" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+               </HBox.margin>
+            </GridPane>
+         </children>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

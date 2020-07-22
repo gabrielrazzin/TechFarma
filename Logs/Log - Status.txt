@@ -1,0 +1,11 @@
+[Status]
+CStat=107
+CUF=33
+DhRecbto=23/04/2020 21:55:31
+Msg=Servico em Operacao
+TMed=1
+VerAplic=SVRSnfce201805211008
+Versao=4.00
+XMotivo=Servico em Operacao
+XObs=
+tpAmb=2

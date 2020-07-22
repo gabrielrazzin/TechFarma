@@ -1,0 +1,59 @@
+
+.table-view {
+   -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+   -fx-background-color:  #0747a6;
+	-fx-border-color: transparent;
+}
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .menu-button {
+	-fx-background-color: linear-gradient(#B9BABB 0%, #7F8183 100%);
+}
+
+.table-view .table-cell {
+    -fx-text-fill: black;
+	-fx-font-family: "Trebuchet MS";
+	-fx-font-size: 13px;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #f2f5fc;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #d5d5d5;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+.table-row-cell:selected {
+    -fx-background-color:#aaaaaa;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+	-fx-table-cell-border-color: white;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 30;
+}
+
+.table-view .filler {  
+	-fx-background-color:
+       #0747a6;
+	-fx-border-color: transparent;  
+}

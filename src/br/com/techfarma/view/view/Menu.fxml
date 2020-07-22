@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="anchorPaneMA" fx:id="anchorPaneA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuPrincipal">
+   <children>
+      <Button id="buttonFecharTOPM" layoutX="997.0" layoutY="7.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="7.0" text="X" />
+      <AnchorPane fx:id="anchorPaneB" layoutY="-3.0" prefHeight="771.0" prefWidth="68.0" style="-fx-background-color: #d7d9d9;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label id="labelHD" layoutX="20.0" layoutY="679.0" text="21:33" />
+            <Label id="labelHD" layoutX="3.0" layoutY="696.0" prefHeight="17.0" prefWidth="63.0" text="01/08/2019" />
+            <ImageView fitHeight="39.0" fitWidth="53.0" layoutX="6.0" layoutY="727.0">
+               <image>
+                  <Image url="@../Images/ThinkByte.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="14.0" layoutY="154.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../Images/Menu/Produtos.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Compra.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Vendas.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="13.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Movimento.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="18.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Caixa.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Funcionario.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../Images/Menu/Cliente.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Convenio.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="18.0" layoutY="20.0">
+               <children>
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#fadeInAnchorC" prefHeight="35.0" prefWidth="33.0" ripplerFill="#0747a6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Menu/Seta%20Direita.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#fadeOutAnchorC" prefHeight="35.0" prefWidth="33.0" ripplerFill="#0747a6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Menu/Seta%20Esquerda.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="anchorPaneMB" fx:id="anchorPaneC" layoutX="68.0" layoutY="-4.0" prefHeight="772.0" prefWidth="159.0" style="-fx-background-color: #0747a6;" visible="false">
+         <children>
+            <VBox layoutY="151.0" prefWidth="175.0">
+               <children>
+                  <MenuButton id="menuButtonM" fx:id="mbProdutos" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="RIGHT" prefHeight="41.0" prefWidth="259.0" text="    Produtos" textFill="WHITE">
+                    <items>
+                      <MenuItem id="menuMmenuitem" mnemonicParsing="false" text="Action 1" />
+                      <MenuItem id="menuMmenuitem" mnemonicParsing="false" text="Action 2" />
+                    </items>
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <MenuButton id="menuButtonM" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="RIGHT" prefHeight="41.0" prefWidth="259.0" text="    Compras" textFill="WHITE">
+                     <items>
+                        <MenuItem id="menuMmenuitem" mnemonicParsing="false" text="Action 1" />
+                        <MenuItem id="menuMmenuitem" mnemonicParsing="false" text="Action 2" />
+                     </items>
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <Button id="buttonM" graphicTextGap="0.0" mnemonicParsing="false" onAction="#abrirVendas" prefHeight="41.0" prefWidth="259.0" text="Vendas">
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="buttonM" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="259.0" text="Movimentos">
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="buttonM" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="259.0" text="Caixa">
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="buttonM" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="259.0" text="Funcionário">
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="buttonM" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="259.0" text="Clientes">
+                     <VBox.margin>
+                        <Insets bottom="17.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="buttonM" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="259.0" text="Convênio">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+            <Label id="tituloM" layoutX="38.0" layoutY="46.0" text="Menu" textFill="WHITE" />
+         </children>
+         <effect>
+            <DropShadow height="2.5" radius="1.375" width="5.0" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane id="anchorPaneMC" fx:id="anchorPaneD" layoutX="292.0" layoutY="45.0" prefHeight="194.0" prefWidth="175.0" visible="false">
+         <children>
+            <Pane id="pane" layoutX="-1.0" prefHeight="193.0" prefWidth="37.0" style="-fx-background-color: #d7d9d9;">
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0" />
+               </effect></Pane>
+            <HBox layoutX="-1.0" layoutY="2.0" prefHeight="191.0" prefWidth="175.0">
+               <children>
+                  <VBox prefHeight="201.0" prefWidth="40.0">
+                     <children>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Menu/Cadastro.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="8.0" top="4.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Menu/Produtos.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Menu/Fisco.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="7.0" top="8.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Menu/Gerencial.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="7.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Menu/Financeiro.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="6.0" top="8.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="7.0" top="8.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../Images/Menu/Logoff.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="191.0" prefWidth="140.0">
+                     <children>
+                        <MenuButton id="menuButtonM" graphicTextGap="0.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="27.0" prefWidth="140.0" text="Cadastro" textAlignment="CENTER" textFill="WHITE">
+                           <items>
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirFilial" text="Filiais" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirGrupoFilial" text="Grupo de Filiais " />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirProduto" text="Produtos" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirClasse" text="Classes" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirGrupo" text="Grupos" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirFabricante" text="Fabricantes" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirPrincipioA" text="Principio Ativo" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirFormasPag" text="Formas de Pagamento" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Alíquotas" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirCFOP" text="CFOP" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirFornecedor" text="Fornecedores" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirCliente" text="Clientes" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirFuncionario" text="Funcionários" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirConvenio" text="Convênios" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirCartao" text="Cartões" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Permissões" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" onAction="#abrirUsuario" text="Usuários" />
+                           </items>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </MenuButton>
+                        <MenuButton id="menuButtonM" graphicTextGap="0.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="27.0" prefWidth="175.0" text="Produtos" textFill="WHITE">
+                           <items>
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Cadastro de Produtos" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Movimentos de Estoque" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Análise de Estoque" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Vendas de Produtos" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Transferências entre Filiais" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Devolução de Mercadorias" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Atualizar Tabela ABC Farma" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Emissão de Etiquetas" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Balanço" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Preços Reajustados" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Entregas" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Trocas" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Controle de Lotes" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Preços da Concorrência" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Preços Farmacia Popular" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Preços Fidelidade" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Preço/ Quantidades e equivalentes" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Gerar Arquivo Para Terminal de Consulta" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Exportar Produtos para a Banlança Filizola" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Exportar Produtos para a Banlança Toledo" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Termo de Garantia" />
+                           </items>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                        <MenuButton id="menuButtonM" graphicTextGap="0.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="27.0" prefWidth="175.0" text="Fisco" textFill="WHITE">
+                           <items>
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Cadastro de NCMs" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Importação de NCMs" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Relatório Diário de Reduções Z" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Relatórios de Vendas / Compras por CFOP" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Produtos / CEST" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <Menu id="menuItemM" mnemonicParsing="false" text="Sintegra">
+                                 <items>
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Improtar Arquivos Sintegra ECF" />
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Gerar Arquivo Sintegra" />
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Enviar Arquivo Sintegra" />
+                                 </items>
+                              </Menu>
+                              <Menu id="menuItemM" mnemonicParsing="false" text="SPED">
+                                 <items>
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Importar Dados ECF" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Gerar Arquivo SPED (Icms)" />
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Gerar Arquivo SPED (Pis /  Cofins))" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Validar Arquivo SPED (Icms)" />
+                                    <MenuItem id="menuItemM" mnemonicParsing="false" text="Validar Arquivo SPED (Pis /  Cofins))" />
+                                 </items>
+                              </Menu>
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <Menu mnemonicParsing="false" text="NFC-e">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Enviar NFC-e (Contingência OffLine)" />
+                                    <MenuItem mnemonicParsing="false" text="Controle de NFC-e" />
+                                 </items>
+                              </Menu>
+                           </items>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                        <MenuButton id="menuButtonM" graphicTextGap="0.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="24.0" prefWidth="138.0" text="Gerencial" textFill="WHITE">
+                           <items>
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Cadastro de Fabricante" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Visualizar Fabricante" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Mudar Fabricante" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Mudar Comissão" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Mudar Grupo" />
+                           </items>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                        <MenuButton id="menuButtonM" graphicTextGap="16.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="27.0" prefWidth="175.0" text="Financeiro" textFill="WHITE">
+                           <items>
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Contas a Pagar" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Contas a Receber" />
+                              <SeparatorMenuItem id="menuMmenuitem" mnemonicParsing="false" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Conferência de Caixa" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Relatório de Movimento de Caixa" />
+                              <MenuItem id="menuItemM" mnemonicParsing="false" text="Relatório de Operadores" />
+                           </items>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                        <Button id="buttonM" alignment="TOP_LEFT" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" text="Logoff" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow height="11.0" radius="5.0" width="11.0" />
+         </effect>
+      </AnchorPane>
+      <JFXButton id="buttonFXM" fx:id="jbtMenu" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="253.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#fadeInAnchorD" prefHeight="35.0" prefWidth="35.0" ripplerFill="#0747a6" visible="false">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Menu/Sub%20Menu.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow height="13.0" radius="4.0" width="5.0" />
+   </effect>
+</AnchorPane>

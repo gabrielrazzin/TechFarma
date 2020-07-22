@@ -1,0 +1,5 @@
+#validacao{
+	-fx-effect: dropshadow(three-pass-box, red, 4, 0, 0, 0);
+}
+
+#validado {}

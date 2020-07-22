@@ -1,0 +1,740 @@
+#tableColumnBandeira {
+	-fx-alignment: CENTER;
+}
+
+#pane{
+	-fx-background-color: #ffffff;
+	-fx-background-radius: 10;
+}
+
+#textfieldVendas {
+	-fx-background-color: Transparent;
+	-fx-font-family: "Arial Black";
+	-fx-font-size: 15px;
+	-fx-text-fill: white;
+}
+
+
+/* Login */
+
+#anchorPaneLogin {
+    -fx-background-color: #000000, linear-gradient(#20BDFF, #223768);
+}
+
+#textFieldLogin {
+   -fx-font-family: "Franklin Gothic Demi";
+   -fx-font-size: 13px;
+   -fx-text-fill: White;
+   -fx-border-color: #d7d7d7d7;
+   -fx-border-width: 1.2;
+   -fx-border-radius: 20;
+   -fx-background-color: transparent;
+}
+
+#textFieldBalcao {
+   -fx-font-family: "Franklin Gothic Demi";
+   -fx-font-size: 20px;
+   -fx-text-fill: White;
+   -fx-border-color: #d7d7d7d7;
+   -fx-border-width: 0;
+   -fx-border-radius: 5;
+   -fx-background-color: transparent;
+}
+
+#buttonLogin {
+   -fx-font-family: "Franklin Gothic Demi";
+   -fx-font-size: 13px;
+   -fx-text-fill: d7d7d7d7;
+   -fx-border-color: #d7d7d7d7;
+   -fx-border-width: 1.2;
+   -fx-border-radius: 20;
+   -fx-background-color: transparent;
+}
+
+#labelLogin {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 9px;
+	-fx-text-fill: white;
+}
+
+#labelLogin:hover {
+    -fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 9px;
+	-fx-underline: true;
+}
+
+#labelLogin:pressed {
+	-fx-text-fill: grey;
+}
+
+#anchorPaneNotONtLogin {
+	-fx-background-color: #169c16;
+}
+
+#anchorPaneNotOFFLogin {
+	-fx-background-color: #ba1e1e;
+}
+
+#buttonNotONLogin {
+	-fx-background-color: #169c16;
+}
+
+#buttonNotONLogin:hover {
+	-fx-background-color:#126312;
+}
+
+#buttonNotOFFLogin {
+	-fx-background-color: #ba1e1e;
+}
+
+#buttonNotOFFLogin:hover {
+	-fx-background-color:#7d1414;
+}
+   
+#labelDataLogin {
+	-fx-font-size: 9px;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+#labelVersaoLogin{
+	-fx-font-size: 8px;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+/* FIM Login */
+
+		
+/* Menu */
+
+#labelHD{
+	-fx-font-family: "System";
+	-fx-font-size: 12px;
+	-fx-text-fill: Black;
+}
+
+#anchorPaneMA {
+	-fx-background-color:  #dee2e3;
+}
+
+#anchorPaneMB {
+	-fx-background-color: #c3c8c9;
+}
+
+#anchorPaneMC{
+	-fx-background-color:  #0747a6;
+	-fx-background-radius: 10; 
+}
+
+#tituloM {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 40px;
+}
+
+#buttonM {
+	-fx-background-color: transparent;
+    -fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+	-fx-text-fill: white;
+}
+
+#buttonM:hover {
+	-fx-background-color: #1e55a6;
+	-fx-opacity:0.9;
+}
+
+#buttonM:pressed {
+	-fx-background-color:#1372d1;
+	-fx-opacity: 0.9;
+}
+
+#menuButtonM {
+	-fx-background-color: transparent;
+    -fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+}
+
+#menuButtonM:pressed {
+	-fx-background-color: #939599;
+	-fx-opacity: 0.9;
+}
+
+#menuButtonM:hover {
+	-fx-background-color: #1e55a6;
+	-fx-opacity:0.9;
+}
+
+#buttonFecharTOPM{
+	-fx-background-color:
+        #a52e2e,
+		#d11d1d;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 10px;
+    -fx-background-radius: 50;
+	-fx-text-fill: white;
+}
+
+#menuItemM:hover{
+	    -fx-background-color: #1e55a6;
+		-fx-opacity: 0.9;
+}
+
+#menuItemM:focused{
+	    -fx-background-color: #1e55a6;
+		-fx-opacity: 0.9;
+}
+
+/* FIM Menu */
+
+#anchorPaneSec {
+	-fx-background-color: #dbdbdb;
+	-fx-border-color: black;
+	-fx-border-width: 1px;
+}
+
+#anchorPaneSuperior {
+	-fx-background-color: #ededed;
+}
+
+#toggleButton {
+	-fx-font-family: "Franklin Gothic Book";
+	-fx-font-size: 15px;
+	-fx-text-fill: #000000;
+    -fx-toggle-color: #3052ba;
+    -fx-untoggle-color: #FAFAFA;
+    -fx-toggle-line-color: #7680c2;
+    -fx-untoggle-line-color: #999999;
+}
+
+#titulo {
+	-fx-font-size: 22px;
+	-fx-font-family: "Franklin Gothic Heavy";
+	-fx-fill: #818181;
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#labelTextFields {
+	-fx-font-family: "Kayak Sans";
+	-fx-font-size: 15px;
+	-fx-text-fill: #000000;
+}
+
+
+#texto {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 15px;
+	-fx-text-fill: #000000;
+}
+
+/* Label's */
+
+#legendaAzul{
+	-fx-background-color:
+        #294c77,
+		#2e5382;	
+    -fx-background-radius: 20px;	
+}
+
+#legendaVermelha{
+	-fx-background-color:
+        #a52e2e,
+		#d11d1d;	
+    -fx-background-radius: 20px;	
+}
+
+#legendaVerde {
+	-fx-background-color:
+        #35822e,
+		#337729;	
+    -fx-background-radius: 20px;	
+}
+
+#legendaAmarela {
+	-fx-background-color:
+        #ccc33b,
+		#c1c13e;	
+    -fx-background-radius: 20px;	
+}
+
+#label-azul{
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+	-fx-text-fill: blue
+}
+
+#label-vermelho{
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+	-fx-text-fill: red
+}
+
+#label {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 15px;
+	-fx-text-fill: #000000;
+}
+
+#labelBSup {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+}
+#atalho {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+	-fx-text-fill: #000000;
+	-fx-stroke: white;
+    -fx-stroke-width: 5px;
+}
+
+#jfxlabeltextfield{
+	-fx-text-fill:	White;
+}
+/* FIM Labe's */
+
+/* Check Box */
+
+#checkBox {
+    -fx-unchecked-color: #5A5A5A;
+    -fx-checked-color: #5191d1;
+	-fx-font-family: "Franklin Gothic Book";
+	-fx-font-size: 15px;
+}
+
+/* Visualização */
+
+/* Fonte de Vendas */
+
+#fonte-vendas {
+	-fx-font-size: 20px;
+	-fx-font-family: "Franklin Gothic Heavy";
+	-fx-fill: #818181;
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+
+#titulo-vendas{
+	-fx-font-size: 30px;
+	-fx-font-family: "Franklin Gothic Heavy";
+	-fx-fill: #818181;
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+/* Tab Pane */
+
+.tab-pane {
+    -fx-tab-min-height: 2em; /* muda o espaçamento da barra */
+    -fx-tab-max-height: 2em;  /* muda o espaçamento da barra */
+    -fx-tab-min-width: 15em;  /* muda o tamanho do espaço da paradinha que clica do tabpane */
+    -fx-tab-max-width: 15em;
+    -fx-padding: 0 -1 -1 0;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+}
+
+.tab-label {
+	-fx-text-fill: white;
+}
+
+.tab {
+    -fx-background-color: #2057a8;
+    -fx-background-radius: 5;
+	-fx-background-insets: 1;
+    -fx-padding: 0 0 0 0;
+	-fx-border-width: 0 0 0 0;
+}
+		
+.tab:selected {
+    -fx-background-color:
+	#16468c;
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+	-fx-padding: 2 2 2 2;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: 
+		#16468c;
+}
+
+.tab:focused {
+  -fx-focus-color: transparent;
+}
+
+.tab-pane *.tab-header-background {
+	-fx-background-color: transparent;
+}
+
+.tab-pane:left *.tab-header-area {
+	-fx-background-insets: 0, 0 0 10;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;    
+}
+
+.tab:selected .focus-indicator {
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Tabela */
+
+.table-view {
+   -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+   -fx-background-color: #2057a8;
+	-fx-border-color: transparent;
+}
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .menu-button {
+	-fx-background-color: linear-gradient(#B9BABB 0%, #7F8183 100%);
+}
+
+.table-view .table-cell {
+    -fx-text-fill: black;
+	-fx-font-family: "Trebuchet MS";
+	-fx-font-size: 13px;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #f2f5fc;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #d5d5d5;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+.table-row-cell:selected {
+    -fx-background-color:#aaaaaa;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+	-fx-table-cell-border-color: white;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 30;
+}
+
+.table-view .filler {  
+	-fx-background-color: #0747a6;
+	-fx-border-color: transparent;  
+}
+
+#tableRow {
+    -fx-background-color: mediumturquoise;
+}
+
+#tableRow:selected{
+	-fx-background-color: cadetblue;
+}
+
+/* Separador */
+
+.separator *.line {
+    -fx-border-color:  #474a51;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #8f98a4;
+    -fx-text-fill: black;
+}
+
+.list-cell:even {
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #d5d5d5;
+    -fx-text-fill: black;
+}
+
+.text-area {
+    -fx-background-color: rgba(53,89,119,0.4);
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+	-fx-border-color: gray
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+	-fx-border-color: gray
+}
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+	-fx-border-color: gray
+}
+
+.menu-bar{
+  -fx-background-color: #2e5382;	  
+  -fx-border-color: #1d3854;
+  -fx-border-width: 1;
+}
+
+.menu-bar .label {
+    -fx-font-size: 18px;
+    -fx-font-family: "Franklin Gothic Demi";
+    -fx-text-fill: #ffffff;
+}
+
+.menu-item .label{
+    -fx-font-size: 15px;
+    -fx-label-line-length: 8;
+	-fx-text-fill: black;
+}
+
+.progress-bar > .track {
+  -fx-background-color: transparent;
+   -fx-border-color:  #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);	
+}
+.progress-bar > .bar {
+  -fx-background-color: #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+ 	
+  -fx-background-size: 1600px 50px;
+  -fx-background-repeat: no-repeat;
+}
+
+/* Botões */
+
+#buttonSalvar{
+	-fx-background-color: #2057a8;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 15px;
+    -fx-background-radius: 5;
+	-fx-text-fill: white;
+}
+
+#buttonSalvar:hover {
+    -fx-background-color: #3a68a3;
+}
+
+#buttonSalvar:pressed {
+	-fx-background-color: #3869b5;
+    -fx-background-radius: 5;
+}
+
+#buttonCancelar{
+	-fx-background-color: #d11d1d;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 15px;
+    -fx-background-radius: 5;
+	-fx-text-fill: white;
+}
+
+#buttonCancelar:hover {
+    -fx-background-color: #c42b2b;
+}
+
+#buttonCancelar:pressed {
+	-fx-background-color:
+        #a52e2e,
+		#db1e1e;
+    -fx-background-radius: 5;
+}
+
+#buttonFechar{
+	-fx-background-color:
+        #a52e2e,
+		#d11d1d;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 10px;
+    -fx-background-radius: 50;
+	-fx-text-fill: white;
+}
+
+#buttonFechar:pressed {
+	-fx-background-color:
+        #a52e2e,
+		#db1e1e;
+    -fx-background-radius: 12;
+}
+
+#buttonPesquisar {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 13px;
+	-fx-font-bold: true;
+	-fx-background-color:
+        #294c77,
+		#2e5382;
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 4 4 4 4;
+    -fx-text-fill: white;
+}
+
+#buttonPesquisar:pressed {
+	-fx-background-color:
+        #3967a0,
+		#4377b7;
+}
+
+#buttonLimpar{
+	-fx-background-color:
+        #a52e2e,
+		#d11d1d;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 13px;
+    -fx-background-radius: 12;
+	-fx-text-fill: white;
+}
+
+#buttonLimpar:pressed {
+	-fx-background-color:
+        #a52e2e,
+		#db1e1e;
+}
+
+#buttonCaixa {
+	-fx-background-color: transparent;
+    -fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 11px;
+	-fx-text-fill: white;
+}
+
+#buttonCaixa:hover {
+	-fx-background-color: #1e55a6;
+	-fx-opacity:0.9;
+}
+
+#buttonCaixa:pressed {
+	-fx-background-color:#1372d1;
+	-fx-opacity: 0.9;
+}
+
+/* FIM Botões */
+
+/* ComboBox */
+
+#comboBox {
+    -fx-background-color: #2057a8;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 15px;
+    -fx-background-radius: 2px;
+}
+
+#comboBox:hover {
+    -fx-background-color: #3062ab;
+}
+
+#comboBox .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 24.1px; 
+}
+
+#comboBox .list-view {
+    -fx-background-color: white, white;
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0);
+}    
+
+#comboBox .list-view .list-cell {
+    -fx-background-color: transparent;
+	-fx-text-fill: black;
+}
+
+#comboBox .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+#comboBox .list-view .list-cell:filled:hover {
+    -fx-background-color: #224777;
+    -fx-text-fill: white;
+}
+
+/* FIM ComboBox */
+
+
+.progress-bar > .track {
+  -fx-background-color: transparent;
+   -fx-border-color:  #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);	
+}
+.progress-bar > .bar {
+  -fx-background-color: #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+ 	
+  -fx-background-size: 1600px 50px;
+  -fx-background-repeat: no-repeat;
+}
+
+#dataPicker {
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+}
+
+#checkComboBox {
+	-fx-background-color: #154f99;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-font-size: 14px;
+}
+
+#checkComboBox:hover {
+    -fx-background-color: #3a68a3;
+}
+
+#checkComboBox .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 24.1px; 
+}
+
+#checkComboBox .list-view {
+    -fx-background-color: white, white;
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0);
+}    
+
+#checkComboBox .list-view .list-cell {
+    -fx-background-color: transparent;
+	-fx-text-fill: black;
+}
+
+#checkComboBox .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+#checkComboBox .list-view .list-cell:filled:hover {
+    -fx-background-color: #224777;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+
+.list-cell:even { /* <=== changed to even */
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}

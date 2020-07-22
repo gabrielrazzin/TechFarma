@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPaneMA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="768.0" prefWidth="1024.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.techfarma.controller.caixa.CaixaCheckoutC">
+   <children>
+      <Pane layoutX="64.0" layoutY="-1.0" prefHeight="768.0" prefWidth="215.0" style="-fx-background-color: #0747a6;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label id="labelVendas" fx:id="lbVendedor" layoutX="4.0" layoutY="74.0" text="Lucas souza" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font></Label>
+            <Label id="labelVendasTitulo" layoutX="4.0" layoutY="48.0" text="Vendedor:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Label>
+            <Label layoutX="6.0" layoutY="131.0" text="Sub-Totais:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Label>
+            <Label layoutX="7.0" layoutY="155.0" text="R$ 30,00" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font></Label>
+            <ImageView fitHeight="127.0" fitWidth="200.0" layoutX="8.0" layoutY="472.0">
+               <image>
+                  <Image url="@../Images/ThinkByte.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="63.0" layoutY="639.0" prefHeight="73.0" prefWidth="950.0" style="-fx-background-color: #0747a6;">
+         <children>
+            <Label fx:id="lbTotal" layoutX="698.0" text="R$0,00" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="63.0" layoutY="650.0" prefHeight="51.0" prefWidth="694.0" style="-fx-background-color: #d7d9d9;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="584.0" layoutY="2.0" text="Total:">
+               <font>
+                  <Font name="Arial Black" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="768.0" prefWidth="63.0" style="-fx-background-color: #d7d9d9;">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="57.0" layoutX="3.0" layoutY="50.0">
+               <image>
+                  <Image url="@../Images/Caixa/salesman.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="57.0" layoutX="2.0" layoutY="130.0">
+               <image>
+                  <Image url="@../Images/Caixa/hand.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tvCaixa" layoutX="278.0" layoutY="-1.0" onKeyPressed="#keyPressed" prefHeight="630.0" prefWidth="747.0">
+        <columns>
+          <TableColumn fx:id="tcCodigo" prefWidth="173.0" text="Código" />
+          <TableColumn fx:id="tcDescricao" prefWidth="320.6666259765625" text="Descrição" />
+            <TableColumn fx:id="tcPreco" prefWidth="68.33331298828125" text="Preço" />
+            <TableColumn fx:id="tcQuantidade" prefWidth="84.0" text="Quantidade" />
+            <TableColumn fx:id="tcTotal" prefWidth="58.33331298828125" text="Total" />
+            <TableColumn fx:id="tcUM" prefWidth="41.33331298828125" text="UM" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

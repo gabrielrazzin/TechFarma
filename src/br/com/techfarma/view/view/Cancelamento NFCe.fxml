@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="460.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.techfarma.controller.nfe.CancelamentoC">
+   <children>
+      <GridPane layoutX="105.0" layoutY="95.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="labelTextFields" text="Informe o Numero da Venda" GridPane.halignment="CENTER" />
+            <TextField fx:id="txtIdVenda" onKeyPressed="#keyPressed" GridPane.rowIndex="1" />
+            <Label id="labelTextFields" text="Informe a Justificativa do Cancelamento" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <TextField fx:id="txtJust" onKeyPressed="#keyPressed" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <AnchorPane id="anchorPaneSuperior" layoutX="1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="458.0">
+         <children>
+            <Label id="labelBSup" layoutX="9.0" layoutY="8.0" text="Cancelamento de NFCe" />
+            <Button id="buttonFechar" fx:id="btClose" layoutX="432.0" layoutY="7.0" mnemonicParsing="false" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

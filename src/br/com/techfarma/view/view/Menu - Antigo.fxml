@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="anchorPaneMenu" fx:id="apMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="768.0" prefWidth="1024.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuPrincipal">
+   <children>
+      <MenuBar prefHeight="30.0" prefWidth="1024.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirFilial" text="Filiais" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadGrupoFilial" text="Grupo de Filiais " />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadProd" text="Produtos" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadClasse" text="Classes" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadGrupo" text="Grupos" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadFab" text="Fabricantes" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadForn" text="Fornecedores" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirGrupoC" text="Grupo de Compra" />
+                  <MenuItem mnemonicParsing="false" text="Alíquotas" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadCFOP" text="CFOPs" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadPA" text="Principio Ativo" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadMarkUp" text="Lista de Marcação" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadFunc" text="Funcionários" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCliente" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadConv" text="Convênios" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCartao" text="Cartões" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadFormasPag" text="Formas de Pagamento" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Permissões" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadUsu" text="Usuários" />
+            </items>
+          </Menu>
+          <Menu text="Produtos">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cadastro de Produtos" />
+                  <MenuItem mnemonicParsing="false" text="Movimentos de Estoque" />
+                  <MenuItem mnemonicParsing="false" text="Análise de Estoque" />
+                  <MenuItem mnemonicParsing="false" text="Vendas de Produtos" />
+                  <MenuItem mnemonicParsing="false" text="Transferências entre Filiais" />
+                  <MenuItem mnemonicParsing="false" text="Devolução de Mercadorias" />
+                  <MenuItem mnemonicParsing="false" text="Atualizar Tabela ABC Farma" />
+                  <MenuItem mnemonicParsing="false" text="Emissão de Etiquetas" />
+                  <MenuItem mnemonicParsing="false" text="Balanço" />
+                  <MenuItem mnemonicParsing="false" text="Preços Reajustados" />
+                  <MenuItem mnemonicParsing="false" text="Vendas Canceladas" />
+                  <MenuItem mnemonicParsing="false" text="Entregas" />
+                  <MenuItem mnemonicParsing="false" text="Trocas" />
+                  <MenuItem mnemonicParsing="false" text="Controle de Lotes" />
+                  <MenuItem mnemonicParsing="false" text="Preços da Concorrência" />
+                  <MenuItem mnemonicParsing="false" text="Preços Farmacia Popular" />
+                  <MenuItem mnemonicParsing="false" text="Preços Fidelidade" />
+                  <MenuItem mnemonicParsing="false" text="Preço/ Quantidades e equivalentes" />
+                  <MenuItem mnemonicParsing="false" text="Gerar Arquivo Para Terminal de Consulta" />
+                  <MenuItem mnemonicParsing="false" text="Exportar Produtos para a Banlança Filizola" />
+                  <MenuItem mnemonicParsing="false" text="Exportar Produtos para a Banlança Toledo" />
+                  <MenuItem mnemonicParsing="false" text="Termo de Garantia" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Financeiro">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Contas a Pagar" />
+                  <MenuItem mnemonicParsing="false" text="Contas a Receber" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Conferência de Caixa" />
+                  <MenuItem mnemonicParsing="false" text="Relatório de Movimento de Caixa" />
+                  <MenuItem mnemonicParsing="false" text="Relatório de Operadores" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Gerencial">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastro de Fabricante" />
+                  <MenuItem mnemonicParsing="false" text="Visualizar Fabricante" />
+                  <MenuItem mnemonicParsing="false" text="Mudar Fabricante" />
+                  <MenuItem mnemonicParsing="false" text="Mudar Comissão" />
+                  <MenuItem mnemonicParsing="false" text="Mudar Grupo" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Fisco">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastro de NCMs" />
+                  <MenuItem mnemonicParsing="false" text="Importação de NCMs" />
+                  <MenuItem mnemonicParsing="false" text="Relatório Diário de Reduções Z" />
+                  <MenuItem mnemonicParsing="false" text="Relatórios de Vendas / Compras por CFOP" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Produtos / CEST" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Sintegra">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Improtar Arquivos Sintegra ECF" />
+                        <MenuItem mnemonicParsing="false" text="Gerar Arquivo Sintegra" />
+                        <MenuItem mnemonicParsing="false" text="Validar Arquivo Sintegra" />
+                        <MenuItem mnemonicParsing="false" text="Enviar Arquivo Sintegra" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="SPED">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Importar Dados ECF" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Gerar Arquivo SPED (Icms)" />
+                        <MenuItem mnemonicParsing="false" text="Gerar Arquivo SPED (Pis /  Cofins))" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Validar Arquivo SPED (Icms)" />
+                        <MenuItem mnemonicParsing="false" text="Validar Arquivo SPED (Pis /  Cofins))" />
+                     </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="NFC-e">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Enviar NFC-e (Contingência OffLine)" />
+                        <MenuItem mnemonicParsing="false" text="Controle de NFC-e" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Logoff">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastro de Fabricante" />
+                  <MenuItem mnemonicParsing="false" text="Visualizar Fabricante" />
+                  <MenuItem mnemonicParsing="false" text="Mudar Fabricante" />
+                  <MenuItem mnemonicParsing="false" text="Mudar Comissão" />
+                  <MenuItem mnemonicParsing="false" text="Mudar Grupo" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane layoutX="14.0" layoutY="103.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="155.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MenuButton id="menuButtonMenu" fx:id="mbProdutos" alignment="BASELINE_LEFT" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" popupSide="RIGHT" prefHeight="56.0" prefWidth="155.0" text="Produtos" textAlignment="RIGHT">
+              <items>
+                <MenuItem id="menuItemMenu" fx:id="miCadProd" mnemonicParsing="false" onAction="#abrirCadProd" text="Cadastro de Produtos" />
+                <MenuItem id="menuItemMenu" mnemonicParsing="false" onAction="#abrirViewProd" text="Consulta de Produtos" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Análise de Estoque" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Transfêrencias entre Filiais" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Devolução de Mercadorias" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Devolução Parcial de Mercadorias" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Preços a Reajustar" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Históricos de Reajustes" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Movimentos de Estoque" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Balanço" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Vendas Canceladas" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Pré-Vendas Excluídas " />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Acertos de Estoque" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Entregas" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Trocas" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Controle de Lotes" />
+              </items>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Produtos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+            <MenuButton id="menuButtonMenu" fx:id="mbCompras" alignment="BASELINE_LEFT" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" popupSide="RIGHT" prefHeight="56.0" prefWidth="155.0" text="Compras" textAlignment="RIGHT" GridPane.rowIndex="2">
+               <items>
+                  <MenuItem id="menuItemMenu" fx:id="miPedCompras" mnemonicParsing="false" onAction="#abrirPedCompras" text="Pedidos de Compra" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Notas Fiscais" />
+                  <Menu id="menuItemMenu" mnemonicParsing="false" text="Parâmetros de Compras">
+                    <items>
+                      <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Conferência de Nota" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="Consulta de Notas Conferidas" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="menuItemMenu" mnemonicParsing="false" text="NFe's Emitidas" />
+               </items>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Compra.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+            <Button id="buttonMenu" fx:id="btVendas" alignment="BASELINE_LEFT" graphicTextGap="9.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#abrirVendas" prefHeight="56.0" prefWidth="155.0" text="Vendas" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Venda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="buttonMenu" fx:id="btCaixa" alignment="BASELINE_LEFT" graphicTextGap="9.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#abrirCaixa" prefHeight="56.0" prefWidth="155.0" text="Caixa" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Caixa.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="buttonMenu" fx:id="btFuncionarios" alignment="BASELINE_LEFT" graphicTextGap="9.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="155.0" text="Funcionários" GridPane.rowIndex="8">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Funcionario.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="buttonMenu" fx:id="btCliente" alignment="BASELINE_LEFT" graphicTextGap="9.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="155.0" text="Cliente" GridPane.rowIndex="10">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Cliente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="buttonMenu" fx:id="btConvenio" alignment="BASELINE_LEFT" graphicTextGap="9.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="155.0" text="Convênio" GridPane.rowIndex="12">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Convenio.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="buttonMenu" fx:id="btMovimentos" alignment="BASELINE_LEFT" graphicTextGap="9.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="155.0" text="Movimentos" GridPane.rowIndex="14">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Menu/Movimento.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <Button id="buttonSairMenu" fx:id="btSair" layoutX="903.0" layoutY="600.0" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="37.0" prefWidth="100.0" text="Sair">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Menu/Sair.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane layoutX="555.0" layoutY="722.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="4">
+               <graphic>
+                  <Label id="label-azul" fx:id="lbData" text="Data" />
+               </graphic>
+            </Button>
+            <Button id="buttonSair" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="6">
+               <graphic>
+                  <Label id="label-vermelho" fx:id="lbHora" text="Hora" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" GridPane.columnIndex="2">
+               <graphic>
+                  <Label id="label-azul" fx:id="lbIP" text="Label" />
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <Label fx:id="lbUser" layoutX="103.0" layoutY="729.0" text="Label" />
+      <Separator layoutX="1.0" layoutY="708.0" prefHeight="16.0" prefWidth="1024.0" />
+      <Separator layoutY="752.0" prefHeight="16.0" prefWidth="1024.0" />
+   </children>
+</AnchorPane>

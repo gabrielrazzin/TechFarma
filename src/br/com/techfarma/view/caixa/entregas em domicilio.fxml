@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="anchorPaneSec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="764.0" stylesheets="@../css/Visual.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutY="118.0" prefHeight="291.0" prefWidth="764.0" stylesheets="@../Arquivos%20Projeto%20Mundial/Visual.css">
+        <columns>
+          <TableColumn prefWidth="245.0" text="Entregador" />
+          <TableColumn minWidth="0.0" prefWidth="90.0" text="Nº Vendas" />
+            <TableColumn prefWidth="75.0" text="Data" />
+            <TableColumn prefWidth="77.0" text="saída" />
+            <TableColumn prefWidth="71.0" text="Chegada" />
+            <TableColumn prefWidth="68.0" text="Tempo" />
+            <TableColumn prefWidth="46.0" text="ítens" />
+            <TableColumn prefWidth="75.0" text="Unidades" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="30.0" layoutY="425.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="66.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="5.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="136.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button id="legendaVermelha" mnemonicParsing="false" prefHeight="25.0" prefWidth="28.0" GridPane.columnIndex="4" />
+            <Label id="texto" text="Concluído" GridPane.columnIndex="2" />
+            <Button id="legendaAzul" mnemonicParsing="false" prefHeight="25.0" prefWidth="28.0" />
+            <Label id="texto" text="Aguardando Retorno" GridPane.columnIndex="6" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="182.0" layoutY="466.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="atalho" text="Label" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label id="atalho" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label id="atalho" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label id="atalho" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="52.0" layoutY="51.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="texto" text="Data Inicial :" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <JFXDatePicker id="data" defaultColor="#31588c" GridPane.rowIndex="1" />
+            <JFXDatePicker id="data" defaultColor="#31588c" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ComboBox id="comboBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label id="texto" text="Data Final :" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Filial :" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label id="texto" text="Entregador :" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <Separator layoutX="20.0" layoutY="409.0" prefHeight="16.0" prefWidth="724.0" />
+      <Separator layoutX="20.0" layoutY="450.0" prefHeight="16.0" prefWidth="724.0" />
+      <AnchorPane id="anchorPaneSuperior" layoutY="1.0" prefHeight="30.0" prefWidth="764.0">
+         <children>
+            <Label id="labelBSup" layoutX="14.0" layoutY="8.0" text="Entregas a Domicílio" />
+            <Button id="buttonFechar" layoutX="739.0" layoutY="6.0" mnemonicParsing="false" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
