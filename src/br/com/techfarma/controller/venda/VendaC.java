@@ -20,13 +20,20 @@ import controller.ConexaoController;
 import controller.MetodosController;
 import java.io.IOException;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.ListChangeListener;
 import javafx.scene.control.Label;
+import javafx.util.converter.BigDecimalStringConverter;
+import javafx.util.converter.NumberStringConverter;
 import javax.swing.JOptionPane;
 
 public class VendaC implements Initializable{
@@ -40,7 +47,9 @@ public class VendaC implements Initializable{
     @FXML
     public TableView<VendaM> tvVenda;
     @FXML
-    public TableColumn tcCod, tcDescricao, tcDesconto, tcPromo, tcPMC, tcPcoUnit, tcValorTotal;
+    public TableColumn tcCod, tcDescricao, tcPromo, tcPMC, tcPcoUnit, tcValorTotal;
+    @FXML
+    public TableColumn<VendaM, BigDecimal> tcDesconto;
     @FXML
     public TableColumn<VendaM, Integer> tcQtd;
     @FXML
@@ -72,14 +81,7 @@ public class VendaC implements Initializable{
         conn.Conexao();
         txtPesquisa.setDisable(true);
         
-        tcCod.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-        tcDescricao.setCellValueFactory(new PropertyValueFactory<>("descricao"));
-        tcQtd.setCellValueFactory(new PropertyValueFactory<>("qtd"));
-        tcDesconto.setCellValueFactory(new PropertyValueFactory<>("txDesconto"));
-        tcPMC.setCellValueFactory(new PropertyValueFactory<>("PMC"));
-        tcPcoUnit.setCellValueFactory(new PropertyValueFactory<>("valorUnitario"));
-        tcValorTotal.setCellValueFactory(new PropertyValueFactory<>("valorTotal"));
-        
+        inicializaTabela();
         newIdVenda();
         lbIdVenda.setText(String.valueOf(idVenda));
         
@@ -87,18 +89,37 @@ public class VendaC implements Initializable{
         editableCols();
     }
     
+    private void inicializaTabela(){
+        tcCod.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+        tcDescricao.setCellValueFactory(new PropertyValueFactory<>("descricao"));
+        tcQtd.setCellValueFactory(new PropertyValueFactory<>("qtd"));
+        tcDesconto.setCellValueFactory(new PropertyValueFactory<>("descontoPerc"));
+        tcPMC.setCellValueFactory(new PropertyValueFactory<>("PMC"));
+        tcPcoUnit.setCellValueFactory(new PropertyValueFactory<>("valorUnitario"));
+        tcValorTotal.setCellValueFactory(new PropertyValueFactory<>("valorTotal"));
+    }
+    
     private void pesquisaProduto() {
         VendaM.descricaoS = txtPesquisa.getText();
         
-             if (stageConsulta == null) {
-            stageConsulta = met.abrirTelaEspera("/br/com/techfarma/view/venda/Venda - CP.fxml", stageConsulta);
-            stageConsulta.setOnHiding(we -> stageConsulta = null);
-            stageConsulta.showAndWait();
-        } else if (stageConsulta.isShowing()) {
-            stageConsulta.toFront();
-        }
+        if (VendaM.descricaoS.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor preencha o campo descrição.");
+        } else {
+            if (stageConsulta == null) {
+                stageConsulta = met.abrirTelaEspera("/br/com/techfarma/view/venda/Venda - CP.fxml", stageConsulta);
+                stageConsulta.setOnHiding(we -> stageConsulta = null);
+                stageConsulta.showAndWait();
+            } else if (stageConsulta.isShowing()) {
+                stageConsulta.toFront();
+            }
 
-        atualizaTela();
+            if (VendaM.newElementS) {
+                atualizaTela();
+                txtPesquisa.clear();
+            } else {
+                txtPesquisa.clear();
+            }
+        }
     }
     
     private void habilitarEntrega() throws IOException{
@@ -119,16 +140,14 @@ public class VendaC implements Initializable{
         }
     }
 
-    public void atualizaTela(){
-        if(verificaDuplicidade()){
-//            calculaValorDesconto();
+    public void atualizaTela() {
+        if (verificaDuplicidade()) {
             calculaPcoTotal();
             atualizaLabels();
             tvVenda.refresh();
         } else {
             tvVenda.setItems(VendaM.getLista());
             calculaPcoTotal();
-//            calculaValorDesconto();
             atualizaLabels();
         }
     }
@@ -136,6 +155,7 @@ public class VendaC implements Initializable{
     private void limparTela(){
         txtVendedor.clear();
         txtVendedor.setDisable(false);
+        txtPesquisa.clear();
         txtPesquisa.setDisable(true);
         VendaM.getLista().clear();
         atualizaLabels();
@@ -273,20 +293,36 @@ public class VendaC implements Initializable{
         met.abrirTelaEspera("/br/com/techfarma/view/venda/Venda - Cadastro Cliente.fxml", stageCadCliente);
     }
     
-    private void editableCols(){       
+    private BigDecimal newValue;
+    
+    private void editableCols() {
         tcQtd.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         tcQtd.setOnEditCommit((CellEditEvent<VendaM, Integer> event) -> {
             TablePosition<VendaM, Integer> pos = event.getTablePosition();
-            
+
             int newQtd = event.getNewValue();
-            
+
             int row = pos.getRow();
             VendaM venda = event.getTableView().getItems().get(row);
             venda.setQtd(newQtd);
-            
+
             calculaPcoTotal();
-//            calculaValorDesconto();
             atualizaLabels();
+        });
+        
+        
+        tcDesconto.setCellFactory(TextFieldTableCell.forTableColumn(new BigDecimalStringConverter()));
+        tcDesconto.setOnEditCommit((CellEditEvent<VendaM, BigDecimal> event) -> {
+            TablePosition<VendaM, BigDecimal> pos = event.getTablePosition();
+
+            newValue = event.getNewValue();
+
+            int row = pos.getRow();
+            VendaM venda = event.getTableView().getItems().get(row);
+            venda.setDescontoPerc(newValue.setScale(2));
+            calculaPcoTotal();
+            atualizaLabels();
+
         });
     }
     
@@ -295,23 +331,25 @@ public class VendaC implements Initializable{
             int idProduto = tvVenda.getItems().get(i).getIdProduto();
             String descricao = tvVenda.getItems().get(i).getDescricao();
             BigDecimal qtd = new BigDecimal(tvVenda.getItems().get(i).getQtd());
-            BigDecimal desconto = tvVenda.getItems().get(i).getTxDesconto();
-            BigDecimal pcoPromocao = tvVenda.getItems().get(i).getPcoPromocao();
+            BigDecimal descontoPerc = tvVenda.getItems().get(i).getDescontoPerc();
+            BigDecimal valorPromocao = tvVenda.getItems().get(i).getValorPromocao();
             BigDecimal PMC = tvVenda.getItems().get(i).getPMC();
-            BigDecimal pcoUnit = tvVenda.getItems().get(i).getValorUnitario();
-            BigDecimal valorTotal = qtd.multiply(pcoUnit);
+            BigDecimal valorUnitario = PMC.subtract(PMC.multiply(descontoPerc.divide(new BigDecimal(100)))).setScale(2, RoundingMode.UP);
+            BigDecimal valorTotal = qtd.multiply(valorUnitario);
             
-            VendaM.getLista().set(i, new VendaM(idProduto, descricao, qtd.intValue(), desconto, pcoPromocao, PMC, pcoUnit, valorTotal));
+            VendaM.getLista().set(i, new VendaM(idProduto, descricao, qtd.intValue(), PMC, valorUnitario, valorPromocao, descontoPerc, valorTotal));
         }
     }
     
-    /*/private void calculaValorDesconto(){ 
-        for(int i = 0; i < tvVenda.getItems().size(); i++){
-            BigDecimal desconto = tvVenda.getItems().get(i).getDesconto();
-            BigDecimal PMC = tvVenda.getItems().get(i).getPMC();
-            BigDecimal valorDesconto = PMC.multiply(desconto.divide(new BigDecimal(100)));
-        }
-    }/*/
+//    private void calculaValorDesconto(){ 
+//        for(int i = 0; i < tvVenda.getItems().size(); i++){
+//            BigDecimal descontoPerc = tvVenda.getItems().get(i).getDescontoPerc();
+//            BigDecimal PMC = tvVenda.getItems().get(i).getPMC();
+//            BigDecimal valorDesconto = PMC.multiply(descontoPerc.divide(new BigDecimal(100)));
+//            
+//            VendaM.getLista().set(i, element)
+//        }
+//    }
     
     private boolean verificaDuplicidade() {
         int ultimoInserido = VendaM.getLista().get(VendaM.getLista().size() - 1).getIdProduto();
@@ -337,7 +375,7 @@ public class VendaC implements Initializable{
             valorLinhaPMC = VendaM.getLista().get(i).getPMC();
             valorLinhaValorTotal = VendaM.getLista().get(i).getValorTotal();
             
-            if(VendaM.getLista().get(i).getTxDesconto().equals(0.00)){
+            if(VendaM.getLista().get(i).getDescontoPerc().equals(0.00)){
                 valorLinhaDesconto = BigDecimal.ZERO;
             } else {
                 valorLinhaDesconto = (valorLinhaPMC.subtract(VendaM.getLista().get(i).getValorUnitario())).multiply(new BigDecimal (VendaM.getLista().get(i).getQtd()));
@@ -520,7 +558,7 @@ public class VendaC implements Initializable{
                     pst.setBigDecimal(19, newVenda.getPMC());
                     pst.setBigDecimal(20, newVenda.getValorDesc());
                     pst.setBigDecimal(21, newVenda.getDiferencaPromocao());
-                    pst.setBigDecimal(22, newVenda.getTxDesconto());
+                    pst.setBigDecimal(22, newVenda.getDescontoPerc());
                     pst.setBigDecimal(23, newVenda.getValorUnitario());
                     pst.setBigDecimal(24, newVenda.getValorTotal());
                     pst.setBigDecimal(25, newVenda.getTroco());

@@ -185,7 +185,7 @@ public class CartaoC implements Initializable, ConsultaI {
             String filtro = txtConsulta.getText();
 
             try {
-                conn.executaSQL("SSELECT idCartao, descricao, tipoCartao, bandeira FROM dbo.Cartoes WHERE (idCartao LIKE '" +filtro+ "%' OR descricao LIKE '" +filtro+ "%')");
+                conn.executaSQL("SELECT idCartao, descricao, tipoCartao, bandeira FROM dbo.Cartoes WHERE (idCartao LIKE '" +filtro+ "%' OR descricao LIKE '" +filtro+ "%')");
 
                 while (conn.rs.next()) {
                     filterData.add(new CartaoM(conn.rs.getInt(1), conn.rs.getString(2), conn.rs.getString(3), conn.rs.getString(4)));

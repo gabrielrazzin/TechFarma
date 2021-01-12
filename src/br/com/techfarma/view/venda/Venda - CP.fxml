@@ -19,7 +19,7 @@
             <DropShadow height="15.0" radius="7.0" width="15.0" />
          </effect>
          <children>
-            <JFXTextField id="jfxTextField" fx:id="txtDescricao" layoutX="-2.0" layoutY="11.0" maxWidth="356.0" minWidth="170.0" onKeyPressed="#keyPesquisa" prefHeight="31.0" prefWidth="356.0" unFocusColor="#d7d9d9" />
+            <JFXTextField id="textfieldVendas" fx:id="txtDescricao" layoutX="-2.0" layoutY="11.0" maxWidth="356.0" minWidth="170.0" onKeyPressed="#keyPesquisa" prefHeight="31.0" prefWidth="356.0" unFocusColor="#d7d9d9" />
          </children>
       </Pane>
       <Pane layoutY="44.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #d7d9d9;">

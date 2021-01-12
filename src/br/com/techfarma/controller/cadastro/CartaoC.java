@@ -162,6 +162,5 @@ public class CartaoC implements Initializable, CadastroI {
                 met.insertException(ex);
             }
         }
-        
     }
 }

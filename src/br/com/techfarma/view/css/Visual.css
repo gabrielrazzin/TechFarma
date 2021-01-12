@@ -14,7 +14,6 @@
 	-fx-text-fill: white;
 }
 
-
 /* Login */
 
 #anchorPaneLogin {
@@ -433,6 +432,25 @@
 	-fx-border-color: transparent;  
 }
 
+#tableRow2 {
+    -fx-background-color: -fx-table-cell-border-color, #f2f5fc;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+#tableRow2:odd {
+	-fx-background-color: #d5d5d5;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+#tableRow2:selected {
+    -fx-background-color:#aaaaaa;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+	-fx-table-cell-border-color: white;
+}
+
 #tableRow {
     -fx-background-color: mediumturquoise;
 }
@@ -440,6 +458,7 @@
 #tableRow:selected{
 	-fx-background-color: cadetblue;
 }
+
 
 /* Separador */
 

@@ -15,6 +15,7 @@ public class VendaM {
     public static String concluidoS;
     public static boolean finalizaVendaS;
     public static String barCodeVenda;
+    public static boolean newElementS;
 
     public static ObservableList<VendaM> getLista() {
         return lista;
@@ -28,8 +29,10 @@ public class VendaM {
     private String descricao;
     private int idFabricante;
     private BigDecimal PMC;
-    private BigDecimal pcoPromocao;
-    private BigDecimal txDesconto;
+    private BigDecimal valorPromocao;
+    private BigDecimal descontoPerc;
+    private String promocaoView;
+    private BigDecimal promocaoPerc;
     private int qtdEstoque; // Consulta Produto
     
     /* Variáveis exclusivas da finalização de venda */
@@ -141,28 +144,28 @@ public class VendaM {
 
    
     
-    public VendaM(int idProduto, String descricao, int idFabricante, BigDecimal PMC, BigDecimal pcoPromocao, BigDecimal txDesconto) {
+    public VendaM(int idProduto, String descricao, int idFabricante, BigDecimal PMC, BigDecimal valorPromocao, BigDecimal descontoPerc) {
         this.idProduto = idProduto;
         this.descricao = descricao;
         this.idFabricante = idFabricante;
         this.PMC = PMC;
-        this.pcoPromocao = pcoPromocao;
-        this.txDesconto = txDesconto;
+        this.valorPromocao = valorPromocao;
+        this.descontoPerc = descontoPerc;
     }
-
-    public VendaM(int idProduto, String descricao, int qtd, BigDecimal txDesconto, BigDecimal pcoPromocao, BigDecimal PMC, BigDecimal valorUnitario, BigDecimal valorTotal) {
+   
+    public VendaM(int idProduto, String descricao, int qtd, BigDecimal PMC, BigDecimal valorUnitario, BigDecimal valorPromocao, BigDecimal descontoPerc, BigDecimal valorTotal){
         this.idProduto = idProduto;
         this.descricao = descricao;
         this.qtd = qtd;
-        this.txDesconto = txDesconto;
-        this.pcoPromocao = pcoPromocao;
         this.PMC = PMC;
         this.valorUnitario = valorUnitario;
+        this.valorPromocao = valorPromocao;
+        this.descontoPerc = descontoPerc;
         this.valorTotal = valorTotal;
     }
     
     public VendaM(int idFilial, int idVenda, String barCodeVenda, int idVendaTroca, int idVendedor, int idCliente, int idConvenio,int idCupom, float idCFOP, String bloqueado, int idProduto, String codigoBarras, String descricao, String NCM, String CEST, String usoContinuo, 
-            int qtd, String unidade, BigDecimal PMC, BigDecimal valorDesc, BigDecimal diferencaPromocao, BigDecimal txDesconto, BigDecimal valorUnitario, BigDecimal valorTotal, BigDecimal troco, String aliquota, String tipoVenda, String entrega, 
+            int qtd, String unidade, BigDecimal PMC, BigDecimal valorDesc, BigDecimal diferencaPromocao, BigDecimal descontoPerc, BigDecimal valorUnitario, BigDecimal valorTotal, BigDecimal troco, String aliquota, String tipoVenda, String entrega, 
             String endereco, String bairro, String referencia, Date dataVenda, Time horaVenda, String vendedor, int terminal, String concluido) {
         
         this.idFilial = idFilial;
@@ -186,7 +189,7 @@ public class VendaM {
         this.PMC = PMC;
         this.valorDesc = valorDesc;
         this.diferencaPromocao = diferencaPromocao;
-        this.txDesconto = txDesconto;
+        this.descontoPerc = descontoPerc;
         this.valorUnitario = valorUnitario;
         this.valorTotal = valorTotal;
         this.troco = troco;
@@ -205,7 +208,7 @@ public class VendaM {
     @Override
     public String toString() {
         return idFilial + ", " + idVenda + ", " + idVendaTroca + ", " + idVendedor + ", " + idCliente + ", " + idConvenio + ", " + idCupom + ", " + idCFOP + ", "+ bloqueado + ", " + idProduto + ", " + codigoBarras + ", " + descricao + ", " + NCM + ", " +usoContinuo + ", " + qtd + ", " +
-                unidade + ", " + PMC + ", " + valorDesc + ", " + diferencaPromocao + ", " + txDesconto + ", " + valorUnitario + ", " + valorTotal + ", " + troco + ", " + aliquota + ", " + tipoVenda + ", " + entrega + ", " + endereco + ", " + bairro + ", " + referencia + ", " +
+                unidade + ", " + PMC + ", " + valorDesc + ", " + diferencaPromocao + ", " + descontoPerc + ", " + valorUnitario + ", " + valorTotal + ", " + troco + ", " + aliquota + ", " + tipoVenda + ", " + entrega + ", " + endereco + ", " + bairro + ", " + referencia + ", " +
                 dataVenda + ", " + horaVenda + ", " + vendedor + ", " +terminal + ", " + concluido;
     }
 
@@ -241,12 +244,16 @@ public class VendaM {
         return PMC;
     }
 
-    public BigDecimal getPcoPromocao() {
-        return pcoPromocao;
+    public BigDecimal getValorPromocao() {
+        return valorPromocao;
     }
 
-    public BigDecimal getTxDesconto() {
-        return txDesconto;
+    public BigDecimal getDescontoPerc() {
+        return descontoPerc;
+    }
+    
+    public void setDescontoPerc(BigDecimal descontoPerc){
+        this.descontoPerc = descontoPerc;
     }
 
     public int getQtdEstoque() {
@@ -380,4 +387,14 @@ public class VendaM {
     public String getDescricaoCartao() {
         return descricaoCartao;
     }
+
+    public String getPromocaoView() {
+        return promocaoView;
+    }
+
+    public BigDecimal getPromocaoPerc() {
+        return promocaoPerc;
+    }
+    
+    
 }

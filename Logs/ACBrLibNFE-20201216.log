@@ -1,0 +1,11 @@
+16/12/20 19:34:44:742 - TLibNFeConfig.AplicarConfiguracoes: C:\Users\Gabriel\Documents\NetBeansProjects\ProjetoFarmaciaMundial\ACBrLib.ini
+16/12/20 19:34:44:743 - Travar
+16/12/20 19:34:44:744 - TLibNFeConfig.AplicarConfiguracoes - Feito
+16/12/20 19:34:44:744 - Destravar
+16/12/20 19:34:44:744 - TLibNFeConfig.Ler - Feito
+16/12/20 19:34:44:744 - Destravar
+16/12/20 19:34:44:745 - LIB_Inicializar( C:\Users\Gabriel\Documents\NetBeansProjects\ProjetoFarmaciaMundial\ACBrLib.ini,  )
+16/12/20 19:34:44:745 -    ACBrLibNFE - 0.4.6.44
+16/12/20 19:34:44:745 -    SetRetorno(0, )
+16/12/20 19:35:03:456 - LIB_Finalizar
+16/12/20 19:35:03:471 - Finalizar

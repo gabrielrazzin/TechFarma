@@ -543,7 +543,7 @@ public class ProdutoC implements Initializable, CadastroI{
                     Double.parseDouble(txtPcoPromo.getText().replaceAll(",", ".")), status);
             
             String SQL = "INSERT INTO Produto.Produto (descricao, idFabricante, idGrupo, idClasse, idPrincipio, idGrupoCompra, idLista, controlado, usoContinuo, pisCOFINS, pedEletronico, qtdCompra, tipoPreco, undVenda,"
-                    + "qtdVenda, IPPT, IAT, comissao, descontoMax, custoUnit, markUP, PMC, promocao, pcoPromocao, status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    + "qtdVenda, IPPT, IAT, comissao, desconto, custoUnit, markUP, PMC, promocao, pcoPromocao, status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
             try {
                 PreparedStatement pst = conn.getConexao().prepareStatement(SQL);

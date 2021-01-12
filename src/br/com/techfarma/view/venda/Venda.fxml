@@ -107,7 +107,7 @@
           <TableColumn fx:id="tcCod" editable="false" prefWidth="70.0" text="Código" />
           <TableColumn fx:id="tcDescricao" editable="false" prefWidth="321.0" text="Descrição" />
             <TableColumn fx:id="tcQtd" minWidth="-Infinity" text="Quantidade" />
-            <TableColumn fx:id="tcDesconto" editable="false" minWidth="-Infinity" prefWidth="110.0" text="\% Desconto" />
+            <TableColumn fx:id="tcDesconto" minWidth="-Infinity" prefWidth="110.0" text="\% Desconto" />
             <TableColumn fx:id="tcPromo" editable="false" minWidth="-Infinity" prefWidth="110.0" text="\% Promoção" />
             <TableColumn fx:id="tcPMC" editable="false" minWidth="-Infinity" prefWidth="110.0" text="P.M.C." />
             <TableColumn fx:id="tcPcoUnit" editable="false" minWidth="-Infinity" prefWidth="111.0" text="  Valor&#10;Unitário&#10;" />

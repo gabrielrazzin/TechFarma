@@ -18,14 +18,14 @@ public class main extends Application {
     public void start(Stage stage) throws Exception {
         //Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/view/Login.fxml"));
 //        Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/view/Menu.fxml"));
-    Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/view/EnvioContingencia.fxml"));
+//    Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/view/EnvioContingencia.fxml"));
 //
-        //Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/cadastro/Cliente.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/cadastro/Produto.fxml"));
 //        Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/view/Configuracoes.fxml"));
-//Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/view/Venda - Cartao.fxml"));
+//      Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/view/Venda - Cartao.fxml"));
 
 //        Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/caixa/Caixa - Checkout.fxml"));
-//        Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/venda/Venda.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/br/com/techfarma/view/venda/Venda.fxml"));
         
         Scene scene = new Scene(root); 
         scene.setFill(Color.TRANSPARENT);
