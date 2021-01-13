@@ -28,6 +28,7 @@ import javafx.stage.Stage;
 
 public class CadastroClienteVC implements Initializable, CadastroI{
     ConexaoController conn = new ConexaoController();
+    //Edição feita por souza
     
     @FXML
     private TextField txtCPF, txtNome, txtCNPJ, txtInsEst, txtFone, txtCelular, txtEmail, txtCEP, txtRua, txtNum, txtBairro, txtCompl, txtLimCred, txtCartFid;
